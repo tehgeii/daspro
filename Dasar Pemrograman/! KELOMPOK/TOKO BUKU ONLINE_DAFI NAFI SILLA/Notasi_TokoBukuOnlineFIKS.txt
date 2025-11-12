@@ -1,0 +1,128 @@
+//judul toko buku online
+//kamus
+Kodebuku, pilihan <-- char
+total_semua_buku <-- 0, total_semua_harga <-- 0 <-- integer
+piljudul, metode <-- integer
+COD <-- "COD", minimarket <-- "minimarket" <-- string
+i, kategori <-- integer
+//kamus untuk kategori buku
+KodeA <-- "Buku Catatan" <-- string
+KodeB <-- "Buku Novel" <-- string
+KodeC <-- "Buku Pembelajaran" <-- string
+KodeD <-- "Komik" <-- string
+KodeE <-- "Kamus" <-- string
+KodeF <-- "Ensiklopedia" <-- string
+//Kamus untuk judul dan harga buku
+judul[6][5] <-- string <-- {
+    {"Notebook", "Blinder", "Spiral", "Lucu", "Kulit"},
+    {"Dikta dan Hukum", "Dilan 1990", "Laskar Pelangi", "5 cm", "Ayat Ayat Cinta"},
+    {"IPA", "IPS", "PAI", "Bahasa Indonesia", "Matematika"},
+    {"One Piece", "Naruto", "Detektif Conan", "Attack on Titan", "Death Note"},
+    {"Bahasa Indonesia", "Bahasa Inggris", "Bahasa Mandarin", "Bahasa Jepang", "Bahasa Rusia"},
+    {"Jurnal", "Anak", "Sains", "Islam", "Biografi"}
+}
+
+harga[6][5] <-- integer <-- {
+    {25000, 32000, 10000, 80000, 45000},
+    {100000, 198000, 200000, 170000, 116000},
+    {165000, 108000, 139000, 81000, 90000},
+    {35000, 25000, 40000, 55000, 88000},
+    {100000, 200000, 250000, 175000, 300000},
+    {100000, 200000, 250000, 175000, 300000}
+}
+
+stok[6] <-- {645, 1854, 319, 225, 548, 144} <--integer
+diskon[6] <-- {0.02, 0.10, 0.20, 0.30, 0.15, 0.25} <-- real
+
+// Fungsi untuk melakukan pembelian
+beliBuku(kategori <-- integer, judulIndex <-- integer) {
+    if (stok[kategori] > 0) then {
+        hargaDiskon <-- harga[kategori][judulIndex] - (harga[kategori][judul_buku] * diskon[judul_buku]) <-- integer
+        total_semua_buku = total_semua_buku + 1
+        stok[kategori] = stok[kategori] - 1
+        output "Buku yang kamu pilih adalah: ", judul[kategori][judul_buku]
+        output "Harga setelah diskon: Rp.", hargaDiskon
+    } else {
+        output "Maaf, stok buku ", judul[kategori][judulIndex], " sudah habis!"
+    }
+}
+
+    repeat {
+        output "======================================"
+        output "                TOKO BUKU            "
+        output "======================================"
+        output "Daftar buku:"
+        output "A) " << KodeA << " - Stok: " << stok[0]
+        output "B) " << KodeB << " - Stok: " << stok[1]
+        output "C) " << KodeC << " - Stok: " << stok[2]
+        output "D) " << KodeD << " - Stok: " << stok[3]
+        output "E) " << KodeE << " - Stok: " << stok[4]
+        output "F) " << KodeF << " - Stok: " << stok[5]
+        output "======================================"
+	repeat
+	{
+        output "Masukkan KODE buku yang ingin Anda cari (A-F): "
+        input Kodebuku
+	} until ((Kodebuku != 'a') and (Kodebuku != 'A') and (Kodebuku != 'b') and (Kodebuku != 'B') and (Kodebuku != 'c') and (Kodebuku != 'C') and (Kodebuku != 'd') and (Kodebuku != 'D') and (Kodebuku != 'E') and (Kodebuku != 'e') and (Kodebuku != 'f') and (Kodebuku != 'F'))
+        kategori <-- -1
+	switch (Kodebuku) {
+        case 'A': case 'a': kategori <-- 0
+        case 'B': case 'b': kategori <-- 1
+        case 'C': case 'c': kategori <-- 2
+        case 'D': case 'd': kategori <-- 3
+        case 'E': case 'e': kategori <-- 4
+        case 'F': case 'f': kategori <-- 5
+	default: kategori <-- -1
+	}
+        if (kategori != -1) then {
+            output "Silahkan pilih judul buku yang ingin Anda beli:"
+            i <-- 0
+            repeat {
+                output i + 1, ". ", judul[kategori][i], " - Harga: Rp.", harga[kategori][i]
+                i = i + 1
+            } until (i < 5)
+
+            repeat {
+            output "Masukkan nomor buku yang ingin Anda beli: "
+            input piljudul
+	    } until ((piljudul < 1) or (piljudul > 5))
+
+            if (piljudul >= 1 and piljudul <= 5) then {
+                beliBuku(kategori, piljudul - 1)
+            }
+	}
+	repeat
+	{
+        output "Apakah Anda ingin membeli buku lain? (Y/N): "
+        input pilihan
+	} until ((pilihan != 'y') and (pilihan != 'Y') and (pilihan != 'n') and (pilihan != 'N'))
+    } until (pilihan = 'Y' or pilihan = 'y')
+
+    output "======================================"
+    output "Total buku yang dipilih: ", total_semua_buku
+    output "Total harga yang harus Anda bayar: Rp.", total_semua_harga
+    output "======================================"
+
+    output "============================"
+    output "1. ", COD
+    output "2. ", minimarket
+    output "============================"
+    repeat
+    {
+        output "Masukkan metode pembayaran anda: "
+        input metode
+    } until ((metode < 1) or (metode > 2))
+    if (metode = 1) then
+    {
+        output "Pemabayaran terkonfirmasi !!!  (COD) "
+        output "Silahkan disiapkan untuk pembayarannya saat kurir kami sampai di lokasi tujuan"
+        output "Terimakasih telah Berbelanja di Toko Kami "
+    }
+    else if (metode = 2)
+    {
+        output "Silahkan Anda mengunjungi minimarket terdekat !!! "
+        output "Tunjukan nomer Pembayaran dibawah ini kepada kasir Minimarket untuk melanjutkan transaksi "
+        output "11122 33444 888555 "
+        output "Barang akan kami kirim H+1 setelah pembayaran selesai "
+        output "Terimakasih telah Berbelanja di Toko Kami "
+    }

@@ -1,0 +1,24 @@
+judul : mencari luas segitiga
+luas segitiga adalah 0,5 * alas * tinggi
+yang dicari adalah luas
+dikatakan segitiganya besar kalua luasnya > 100, selain itu kecil
+-----
+kamus (deklarasi variable)
+alas <-- angka (int / integer)		int angka;
+tinggi <-- angka (int / integer)	int tinggi;
+luas <-- angka pecahan (real)		float luas;
+
+diskripsi / algoritma
+
+alas = 5
+tinggi = 10
+luas = 0,5 * alas * tinggi
+
+if (luas > 100) then
+	{
+		output "besar"
+	}
+else
+	{
+		output "kecil"
+	}

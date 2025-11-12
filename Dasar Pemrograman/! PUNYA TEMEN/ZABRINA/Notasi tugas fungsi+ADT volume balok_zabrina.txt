@@ -1,0 +1,21 @@
+//judul: balok adt dan fungsi
+//kamus
+type Balok
+{
+	panjang, lebar, tinggi <-- integer
+}
+volume, hitungVolume(Balok b) <-- integer
+//diskripsi
+Balok balok1
+output"Masukkan panjang balok: "
+input balok1.panjang
+output"Masukkan lebar balok: "
+input balok1.lebar
+output "Masukkan tinggi balok: "
+input balok1.tinggi
+hitungVolume(balok1) <-- volume
+output "Volume balok: ", volume
+hitungVolume(b <-- Balok) <-- integer
+{
+	b.panjang * b.lebar * b.tinggi <-- return
+}

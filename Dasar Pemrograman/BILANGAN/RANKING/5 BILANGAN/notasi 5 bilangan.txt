@@ -1,0 +1,298 @@
+//judul: tugas daspro urutan bilangan dari terbesar ke terkecil
+
+//kamus
+bil1, bil2, bil3, bil4, bil5 <-- integer
+
+//diskripsi
+    
+//input kelima bilangan
+output "Masukkan bilangan pertama"
+output "Masukkan bilangan kedua"
+output "Masukkan bilangan ketiga"
+output "Masukkan bilangan keempat"
+output "Masukkan bilangan kelima"
+
+//mencari bilangan terbesar dan urutannya (besar ke kecil)
+if (bil1 >= bil2 and bil1 >= bil3 and bil1 >= bil4 and bil1 >= bil5) then
+    {
+        output "Bilangan terbesar adalah bil1"
+
+        if (bil2 >= bil3 and bil2 >= bil4 and bil2 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil2"
+
+            if (bil3 >= bil4 and bil3 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil3"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5)"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bil5)"
+            } 
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil4"
+                output "Bilangan terkecil adalah bil4"
+            }
+        } 
+        else if (bil3 >= bil2 and bil3 >= bil4 and bil3 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil3"
+
+            if (bil2 >= bil4 and bil2 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil2"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bil5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil2"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+        else
+        {
+            output "Bilangan kedua terbesar adalah bil5"
+
+            if (bil2 >= bil4) then
+            {
+                output "Bilangan ketiga terbesar adalah bil2"
+                output "Bilangan keempat terbesar adalah bil4"
+                output "Bilangan terkecil adalah bil3"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil4"
+                output "Bilangan keempat terbesar adalah bil2"
+                output "Bilangan terkecil adalah bil3"
+            }
+        }
+    }
+    else if (bil2 >= bil1 and bil2 >= bil3 and bil2 >= bil4 and bil2 >= bil5) then
+    {
+        output "Bilangan terbesar adalah bil2"
+
+        if (bil1 >= bil3 and bil1 >= bil4 and bil1 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil1"
+
+            if (bil3 >= bil4 and bil3 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil3"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5)"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil4"
+                output "Bilangan terkecil adalah bil4"
+            }
+        }
+        else if (bil3 >= bil1 and bil3 >= bil4 and bil3 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil3"
+
+            if (bil1 >= bil4 and bil1 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5)"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil1"
+            }
+        }
+        else
+        {
+            output "Bilangan kedua terbesar adalah bil5"
+
+            if (bil1 >= bil4) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah bil4"
+                output "Bilangan terkecil adalah bil3"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil4"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil3"
+            }
+        }
+    }
+    else if (bil3 >= bil1 and bil3 >= bil2 and bil3 >= bil4 and bil3 >= bil5) then
+    {
+        output "Bilangan terbesar adalah bil3"
+
+        if (bil1 >= bil2 and bil1 >= bil4 and bil1 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil1"
+
+            if (bil2 >= bil4 and bil2 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil2"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5)"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil2"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+        else if (bil2 >= bil1 and bil2 >= bil4 and bil2 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil2"
+
+            if (bil1 >= bil4 and bil1 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah (bil4 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil4 dan bil5)"
+                output "Bilangan terkecil adalah (bil4 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil4 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil1"
+            }
+        }
+        else
+        {
+            output "Bilangan kedua terbesar adalah bil5"
+
+            if (bil1 >= bil4) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah bil4"
+                output "Bilangan terkecil adalah bil2"
+            } 
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil4"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+    }
+    else if (bil4 >= bil1 and bil4 >= bil2 and bil4 >= bil3 and bil4 >= bil5) then
+    {
+        output "Bilangan terbesar adalah bil4"
+
+        if (bil1 >= bil2 and bil1 >= bil3 and bil1 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil1"
+
+            if (bil2 >= bil3 and bil2 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil2"
+                output "Bilangan keempat terbesar adalah (bil3 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil3 dan bil5)"
+                output "Bilangan terkecil adalah (bil3 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil3 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil2"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+        else if (bil2 >= bil1 and bil2 >= bil3 and bil2 >= bil5) then
+        {
+            output "Bilangan kedua terbesar adalah bil2"
+
+            if (bil1 >= bil3 and bil1 >= bil5) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah (bil3 lebih besar atau sama dengan bil5, diambil bilangan yang lebih besar antara bil3 dan bil5)"
+                output "Bilangan terkecil adalah (bil3 lebih kecil dari bil5, diambil bilangan yang lebih kecil antara bil3 dan bi5)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil5"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil1"
+            }
+        }
+        else
+        {
+            output "Bilangan kedua terbesar adalah bil5"
+
+            if (bil1 >= bil3) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah bil3"
+                output "Bilangan terkecil adalah bil2"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil3"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+    }
+    else
+    {
+        output "Bilangan terbesar adalah bil5"
+
+        if (bil1 >= bil2 and bil1 >= bil3 and bil1 >= bil4) then
+        {
+            output "Bilangan kedua terbesar adalah bil1"
+
+            if (bil2 >= bil3 and bil2 >= bil4) then
+            {
+                output "Bilangan ketiga terbesar adalah bil2"
+                output "Bilangan keempat terbesar adalah (bil3 lebih besar atau sama dengan bil4, diambil bilangan yang lebih besar antara bil3 dan bil4)"
+                output "Bilangan terkecil adalah (bil3 lebih kecil dari bil4, diambil bilangan yang lebih kecil antara bil3 dan bi4)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil4"
+                output "Bilangan keempat terbesar adalah bil2"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+        else if (bil2 >= bil1 and bil2 >= bil3 and bil2 >= bil4) then
+        {
+            output "Bilangan kedua terbesar adalah bil2"
+
+            if (bil1 >= bil3 and bil1 >= bil4) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah (bil3 lebih besar atau sama dengan bil4, diambil bilangan yang lebih besar antara bil3 dan bil4)"
+                output "Bilangan terkecil adalah (bil3 lebih kecil dari bil4, diambil bilangan yang lebih kecil antara bil3 dan bi4)"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil4"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil1"
+            }
+        }
+        else
+        {
+            output "Bilangan kedua terbesar adalah bil4"
+
+            if (bil1 >= bil3) then
+            {
+                output "Bilangan ketiga terbesar adalah bil1"
+                output "Bilangan keempat terbesar adalah bil3"
+                output "Bilangan terkecil adalah bil2"
+            }
+            else
+            {
+                output "Bilangan ketiga terbesar adalah bil3"
+                output "Bilangan keempat terbesar adalah bil1"
+                output "Bilangan terkecil adalah bil2"
+            }
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+//judul : deret bilangan
+//kamus
+bil, bal <-- integer
+//diskripsi
+output "deret bilangan dari 1-20"
+bil <-- 1
+repeat
+{
+	bal <-- 21-bil
+	repeat
+	{
+		output bal
+		bal <-- bal-1
+	} until (bal > 0)
+	bil <-- bil+1
+} until (bil < 21)

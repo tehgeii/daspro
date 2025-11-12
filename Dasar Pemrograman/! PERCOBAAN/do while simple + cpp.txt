@@ -1,0 +1,33 @@
+notasi
+
+//judul: do while simple
+//kamus
+pilihan <-- char
+//diskripsi
+output "contoh do while (loop) simple"
+repeat
+{
+	output "apakah anda ingin mengulang?"
+	output "ketik (Y) untuk mengulang, ketik huruf apapun untuk tidak mengulang"
+} until (pilihan = 'y' atau pilihan = 'Y')
+output "anda keluar dari loop"
+
+codingan
+
+//judul: do while simple
+#include <iostream>
+using namespace std;
+//kamus
+char pilihan;
+int main()
+{
+    cout << "contoh do while (loop) simple" << endl;
+    do
+    {
+        cout << "apakah anda ingin mengulang?" << endl;
+        cout << "ketik (Y) untuk mengulang, ketik huruf apapun untuk tidak mengulang" << endl;
+        cin >> pilihan;
+    } while (pilihan == 'y' || pilihan == 'Y');
+    cout << "anda keluar dari loop" << endl;
+    return 0;
+}

@@ -1,0 +1,24 @@
+notasi
+
+//judul: deret bilangan
+//kamus
+bil, bal, hasil <- integer
+//diskripsi
+output "deret bilngan"
+bil <- 3
+bal <- 26
+hasil <- 0
+repeat
+{
+	output "kurang" bil
+	hasil <- hasil kurang bil
+	bil <- bil tambah 3
+	repeat
+	{
+		output "tambah" bal
+		hasil <- hasil tambah bal
+		bal <- bal kurangi 2
+		abaikan
+	} until(bal lebih besar samadengan 10)
+} until(bil lebih kecil samadengan 27)
+output "samadengan" hasil

@@ -1,0 +1,213 @@
+//judul: tugas daspro ADT STNK Zabrinaa
+//kamus :
+//ADT untuk STNK
+//NAMA
+type NAMA
+{
+    nama_pemilik <-- string
+}
+//NomorRegristasi
+type NomorRegristrasi
+{
+    noregris <-- string
+}
+//ALAMAT
+type ALAMAT
+{
+    alamat, kelurahan, kecamatan, rtrw <-- string
+}
+//MERK
+type MERK
+{
+    merk_motor <-- string
+}
+//TIPE
+type TIPE
+{
+    tipe_motor <-- string
+}
+//JENIS
+type JENIS
+{
+    jenis_motor <-- string
+}
+//MODEL
+type MODEL
+{
+    model_motor <-- string
+}
+//TahunPembuatan
+type TahunPembuatan
+{
+    th_pembuatan <-- int
+}
+//ISISILINDER
+type ISISILINDER
+{
+    dayalistrik <-- int
+}
+//NOMORRANGKA
+type NOMORRANGKA
+{
+    no_rangka <-- string
+}
+//NOMORMESIN
+type NOMORMESIN
+{
+    no_mesin <-- string
+}
+//NOMORNIK
+type NOMORNIK
+{
+    no_nik <-- string
+}
+//WARNAMOTOR
+type WARNAMOTOR
+{
+    warna <-- string
+}
+//BAHANBAKARMOTOR
+type BAHANBAKARMOTOR
+{
+    bahanbakar <-- string
+}
+//WARNATNKB
+type WARNATNKB
+{
+    warna_tnkb <-- string
+}
+//TAHUNREGRISTRASI
+type TAHUNREGRISTRASI
+{
+    th_regristrasi <-- int
+}
+//NOMORBPKB
+type NOMORBPKB
+{
+    no_bpkb <-- string
+}
+//NOMORURUTPENDAFTARAN
+type NOMORURUTPENDAFTARAN
+{
+    no_urutpendftrn <-- string
+}
+//KODELOKASI
+type KODELOKASI
+{
+    kode_lok <-- string
+}
+
+//MASABERLAKUMOTOR
+type MASABERLAKUMOTOR
+{
+    berlaku_sampai <-- string
+}
+
+//DATA STNK
+type STNK
+{
+    nama_pemilik_stnk <-- NAMA
+    noregris_stnk <-- NomorRegristrasi
+    alamat_stnk <-- ALAMAT
+    merk_motor_stnk <-- MERK
+    tipe_motor_stnk <-- TIPE
+    jenis_motor_stnk <-- JENIS
+    model_motor_stnk <-- MODE
+    th_pembuatan_stnk <-- TahunPembuatan
+    dayalistrik_stnk <-- ISISILINDER
+    no_rangka_stnk <-- NOMORRANGKA
+    no_mesin_stnk <-- NOMORMESIN
+    no_nik_stnk <-- NOMORNIK
+    warna_stnk <-- WARNAMOTOR
+    bahanbakar_stnk <-- BAHANBAKARMOTOR
+    warna_tnkb_stnk <-- WARNATNKB
+    th_regristrasi_stnk <-- TAHUNREGRISTRASI
+    no_bpkb_stnk <-- NOMORBPKB
+    no_urutpendftrn_stnk <-- NOMORURUTPENDAFTARAN
+    kode_lok_stnk <-- KODELOKASI
+    berlaku_sampai_stnk <-- MASABERLAKUMOTOR
+
+
+}
+//diskripsi
+//INPUTAN DATA ADT STNK
+zabrinaa <-- STNK 
+inputSTNK <-- STNK 
+{
+    stnk <-- STNK
+    output "Inputan Data ADT STNK"
+    output "Masukkan Nama Pemilik Anda: "
+    input zabrinaa.nama_pemilik_stnk.nama_pemilik
+    output "Masukkan NomorRegristasi Anda: "
+    input zabrinaa.noregris_stnk.noregris
+    output "Masukkan Alamat Anda: "
+    input zabrinaa.alamat_stnk.alamat
+    output "Masukkan Alamat Kelurahan Anda: "
+    input zabrinaa.alamat_stnk.kelurahan
+    output "Masukkan Alamat Kecamatan Anda: "
+    input zabrinaa.alamat_stnk.kecamatan
+    output "Masukkan Alamat RT/RW Anda: "
+    input zabrinaa.alamat_stnk.rtrw
+    output "Masukkan Merk Motor Anda: "
+    input zabrinaa.merk_motor_stnk.merk_motor
+    output "Masukkan Tipe Motor Anda: "
+    input zabrinaa.tipe_motor_stnk.tipe_motor
+    output "Masukkan Jenis Motor Anda: "
+    input zabrinaa.jenis_motor_stnk.jenis_motor
+    output "Masukkan Model Motor Anda: "
+    input zabrinaa.model_motor_stnk.model_motor
+    output "Masukkan Tahun Pembuatan Motor Anda: "
+    input zabrinaa.th_pembuatan_stnk.th_pembuatan
+    output "Masukkan Isi Silinder Anda: "
+    input zabrinaa.dayalistrik_stnk.dayalistrik
+    output "Masukkan Nomor Rangka Motor Anda: "
+    input zabrinaa.no_rangka_stnk.no_rangka
+    output "Masukkan Nomor Mesin Motor Anda: "
+    input zabrinaa.no_mesin_stnk.no_mesin
+    output "Masukkan Nomor NIK Motor Anda: "
+    input zabrinaa.no_nik_stnk.no_nik
+    output "Masukkan Warna Motor Anda: "
+    input zabrinaa.warna_stnk.warna
+    output "Masukkan Bahan Bakar Motor Anda: "
+    input zabrinaa.bahanbakar_stnk.bahanbakar
+    output "Masukkan Warna TNKB Anda: "
+    input zabrinaa.warna_tnkb_stnk.warna_tnkb
+    output "Masukkan Tahun Regristrasi Anda: "
+    input zabrinaa.th_regristrasi_stnk.th_regristrasi
+    output "Masukkan Nomor BPKB Anda: "
+    input zabrinaa.no_bpkb_stnk.no_bpkb
+    output "Masukkan Nomor Urut Pendaftaran Anda: "
+    input zabrinaa.no_urutpendftrn_stnk.no_urutpendftrn
+    output "Masukkan Kode Lokasi Anda: "
+    input zabrinaa.kode_lok_stnk.kode_lok
+    output "Masukkan Masa Berlaku Motor Anda: "
+    input zabrinaa.berlaku_sampai_stnk.berlaku_sampai
+}
+{
+    inputSTNK <-- STNK stnk
+    //output untuk memverifikasi data STNK
+    output "=====Data STNK Anda====="
+    output "Nama Pemilik: ", zabrinaa.nama_pemilik_stnk.nama_pemilik  
+    output "Nomor Regristrasi: ", zabrinaa.noregris_stnk.noregris
+    output "Alamat: ", zabrinaa.alamat_stnk.alamat 
+    output "Kelurahan: ", zabrinaa.alamat_stnk.kelurahan 
+    output "Kecamatan: ", zabrinaa.alamat_stnk.kecamatan 
+    output "RT/RW: ", zabrinaa.alamat_stnk.rtrw 
+    output "Merk: ", zabrinaa.merk_motor_stnk.merk_motor 
+    output "Tipe: ", zabrinaa.tipe_motor_stnk.tipe_motor 
+    output "Jenis: ", zabrinaa.jenis_motor_stnk.jenis_motor 
+    output "Model : ", zabrinaa.model_motor_stnk.model_motor 
+    output "Tahun Pembuatan: ", zabrinaa.th_pembuatan_stnk.th_pembuatan 
+    output "Isi Silinder : ", zabrinaa.dayalistrik_stnk.dayalistrik 
+    output "Nomor Rangka: ", zabrinaa.no_rangka_stnk.no_rangka 
+    output "Nomor Mesin: ", zabrinaa.no_mesin_stnk.no_mesin 
+    output "Nomor NIK: ", zabrinaa.no_nik_stnk.no_nik 
+    output "Warna Motor: ", zabrinaa.warna_stnk.warna 
+    output "Bahan Bakar : ", zabrinaa.bahanbakar_stnk.bahanbakar 
+    output "Warna TNKB: ", zabrinaa.warna_tnkb_stnk.warna_tnkb 
+    output "Tahun Regristrasi : ", zabrinaa.th_regristrasi_stnk.th_regristrasi 
+    output "Nomor BPKB: ", zabrinaa.no_bpkb_stnk.no_bpkb 
+    output "Nomor Urut Pendaftaran: ", zabrinaa.no_urutpendftrn_stnk.no_urutpendftrn 
+    output "Kode Lokasi : ", zabrinaa.kode_lok_stnk.kode_lok 
+    output "Masa Berlaku: ", zabrinaa.berlaku_sampai_stnk.berlaku_sampai 
+}

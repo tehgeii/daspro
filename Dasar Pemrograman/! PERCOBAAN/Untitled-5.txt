@@ -1,0 +1,25 @@
+//judul: input nama lengkap berdasarkan pilihan
+//kamus
+nama <- string
+pilihan <- char
+//diskripsi
+//input pilihan dari user atau pengguna
+output "masukkan pilihan (Y) atau (N)"
+input pilihan
+
+//memproses pilihan
+if (pilihan samadengan 'Y' atau pilihan samadengan 'y') then
+{
+	output "masukkan nama lengkap"
+	abaikan input string
+	input string nama
+	output "nama lengkap anda" nama
+}
+else if (pilihan samadengan 'N' atau pilihan samadengan 'n') then
+{
+	output "program diakhiri"
+}
+else
+{
+	output "inputan salah"
+}

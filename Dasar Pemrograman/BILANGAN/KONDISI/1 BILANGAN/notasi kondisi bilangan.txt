@@ -1,0 +1,44 @@
+//judul: tugas daspro kondisi bilangan -100 < 100
+//kamus
+bilangan <-- integer
+//diskripsi
+//masukkan bilangan
+output "Masukkan bilangan (-100 < 100): "
+input bilangan
+
+//mengecek apakah bilangan yang dimasukkan -100 < bilangan < 100
+until (bilangan <= -100 or bilangan >= 100)
+{
+	output "Bilangan yang dimasukkan tidak benar. Silahkan masukkan bilangan dengan aturan (-100 < 100): "
+	input bilangan
+}
+
+//mengecek apakah bilangan tersebut 0 atau tidak
+if (bilangan = 0) then
+{
+        output bilangan, " Adalah bilangan 0"
+}
+//mengecek apakah bilangan tersebut negatif atau positif
+else  if (bilangan > 0) then
+{
+//mengecek apakah bilangan tersebut genap atau ganjil
+	if (bilangan mod 2 = 0) then
+	{
+		output bilangan, " Adalah bilangan positif genap"
+	}
+	else
+	{
+		output bilangan, " Adalah bilangan positif ganjil"
+	}
+} 
+else //mengecek apakah bilangan tersebut genap atau ganjil untuk bilangan negatif
+{
+	if (bilangan mod 2 = 0) then
+	{
+		output bilangan, " Adalah bilangan negatif genap"
+	}
+	else
+	{
+		output bilangan, " Adalah bilangan negatif ganjil"
+	}
+}

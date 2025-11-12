@@ -1,0 +1,24 @@
+//judul: status segitiga dengan 3 inputan nilai sisi
+//kamus
+s1, s2, s3 <- integer
+//diskripsi
+//input 3 sisi segitiga
+output "masukkan sisi segitiga 1"
+input s1
+output "masukkan sisi segitiga 2"
+input s2
+output "masukkan sisi segitiga 3"
+input s3
+
+if (s1 samadengan s2 and s2 samadengan s3) then
+{
+	output "segitiga sama sisi"
+}
+else if (s1 samadengan s2 atau s2 samadengan s3 atau s1 samadengan s3) then
+{
+	output "segitiga sama kaki"
+}
+else
+{
+	output "segitiga sembarang"
+}

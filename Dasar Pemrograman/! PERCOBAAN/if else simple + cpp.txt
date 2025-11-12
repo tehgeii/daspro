@@ -1,0 +1,43 @@
+notasi
+
+//judul: if else simple
+//kamus
+angka1, angka2 <-- integer
+//diskripsi
+output "masukkan angka 1: "
+input angka1
+output "masukkan angka 2: "
+input angka2
+if (angka1 > angka2) then
+{
+	output "angka 1 besar"
+}
+else
+{
+	output "angka 2 besar"
+}
+
+codingan
+
+//judul: if else simple
+#include <iostream>
+using namespace std;
+//kamus
+int angka1, angka2;
+int main()
+{
+    cout << "contoh if else simple" << endl;
+    cout << "masukkan angka 1: " << endl;
+    cin >> angka1;
+    cout << "masukkan angka 2: " << endl;
+    cin >> angka2;
+    if (angka1 > angka2)
+    {
+        cout << "angka 1 besar" << endl;
+    }
+    else
+    {
+        cout << "angka 2 besar" << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,100 @@
+//judul: proyek daspro rayya
+//kamus
+durasi, biaya, bayar, kembalian, utang <-- integer
+tipe, lanjut <-- char
+//diskripsi
+biaya <-- 0
+repeat
+{
+	output "Masukkan tipe kendaraan"
+        output "A) Sepeda motor/motor listrik"
+        output "B) Tossa"
+        output "C) Sepeda"
+        output "D) Mobil"
+        output "E) MiniTruck/Truck"
+        output "F) Bus/MiniBus"
+        input tipe
+
+        if (tipe = 'A' atau tipe = 'a') then
+        {
+            output "Anda memakai Sepeda motor/motor listrik!"
+        } else if (tipe = 'B' atau tipe = 'b') then
+        {
+            output "Anda memakai Tossa!"
+        } else if (tipe = 'C' atau tipe = 'c') then
+        {
+            output "Anda memakai Sepeda!"
+        } else if (tipe = 'D' atau tipe = 'd') then
+        {
+            output "Anda memakai Mobil!"
+        } else if (tipe = 'E' atau tipe = 'e') then
+        {
+            output "Anda memakai MiniTruck/Truck!"
+        } else if (tipe = 'F' atau tipe = 'f') then
+        {
+            output "Anda memakai Bus/MiniBus!"
+        }
+        else
+        {
+            output "Tipe kendaraan tidak dikenali! Silakan coba lagi."
+        }
+        output "Masukkan durasi parkir (dalam jam): "
+        input durasi
+
+	if (tipe = 'A' atau tipe = 'a') then
+        {
+            biaya <-- durasi * 3000
+            output "Biaya parkir untuk Sepeda Motor/Sepeda Listrik: Rp ", biaya
+        } 
+        else if (tipe = 'B' atau tipe = 'b') then
+        {
+            biaya <-- durasi * 4000
+            output "Biaya parkir untuk Tossa: Rp ", biaya
+        } 
+        else if (tipe = 'C' atau tipe = 'c') then
+        {
+            biaya <-- durasi * 2000
+            output "Biaya parkir untuk Sepeda: Rp ", biaya
+        }
+    
+        else if (tipe = 'D' atau tipe = 'd') then
+        {
+            biaya <-- durasi * 5000
+            output "Biaya parkir untuk Mobil: Rp ", biaya
+        }
+    
+        else if (tipe = 'E' atau tipe = 'e') then 
+        {
+            biaya <-- durasi * 12000
+            output "Biaya parkir untuk MiniTruck/Truck: Rp ", biaya
+        }
+
+        else if (tipe = 'F' atau tipe = 'f') then
+        {
+            biaya <-- durasi * 10000
+            output "Biaya parkir untuk Bus/MiniBus: Rp ", biaya
+        }
+        else
+        {
+            output "Durasi Parkir tidak dikenali! Silakan coba lagi."
+        }
+        output "Apakah anda salah memasukkan tipe kendaraan dan waktu durasi parkir anda?"
+        output "jika iya ketik (y) dan jika tidak ketik (n)"
+        input lanjut
+} until (lanjut = 'Y' atau lanjut = 'y' )
+
+output "Masukkan Jumlah Uang mu: Rp "
+input bayar
+if (bayar = biaya) then
+{
+	output "Uang anda pas"
+} else if (bayar > biaya) then
+{
+	kembalian <-- bayar - biaya
+	output "Pembayaran anda lunas dan kembalian anda sebesar: Rp ", kembalian
+}
+else
+{
+	utang <-- biaya - bayar
+	output "Uang anda kurang dan anda masih memiliki utang sebesar: Rp ", utang
+}

@@ -1,0 +1,72 @@
+//judul: fungsi jam DAFI
+//kamus
+type jamberangkat
+{
+	JB, MB, DB, TB <-- integer
+}
+type jamdatang
+{
+	JD, MD, DD, TD <-- integer
+}
+type totaljam
+{
+	TBD, TJJ, TMM, TDD <-- integer
+}
+TB, TD, TBD, TJJ, TMM, TDD <-- integer
+ubah_format_jam_ke_detik(jam, menit, detik) <-- integer
+ngurangi_jam(waktudatang, waktuberangkat) <-- integer
+balik_ke_bentuk_jam(total_detik, jam, menit, detik)
+outputan(total_detik, jam, menit, detik)
+inputan_jam_berangkat(jb <-- jamberangkat)
+inputan_jam_datang(jd <-- jamdatang)
+//diskripsi
+output "jam"
+jb <-- jamberangkat
+input_jam_berangkat(jb)
+ubah_format_jam_ke_detik(jb.JB, jb.MB, jb.DB) <-- TB
+jd <-- jamdatang
+inputan_jam_datang(jd)
+ubah_format_jam_ke_detik(jd.JD, jd.MD, jd.DD) <-- TD
+ngurangi_jam(TD, TB) <-- TBD
+balik_ke_bentuk_jam(TBD, TJJ, TMM, TDD)
+outputan(TBD, TJJ, TMM, TDD)
+
+ubah_format_jam_ke_detik(jam, menit, detik) <-- integer
+{
+	jam * 3600 + menit * 60 + detik <-- return
+}
+ngurangi_jam(waktudatang, waktuberangkat) <-- integer
+{
+	waktudatang - waktuberangkat <-- return
+}
+balik_ke_bentuk_jam(total_detik, jam, menit, detik)
+{
+	total_detik div 3600 <-- jam
+	(total_detik mod 3600) div 60 <-- menit
+	total_detik mod 60 <-- detik
+}
+outputan(total_detik, jam, menit, detik)
+{
+	output "Maka Total Waktu Perjalanan Anda Adalah: ", total_detik
+	output "Atau ", jam, " Jam ", menit, " Menit ", detik, " Detik"
+}
+inputan_jam_berangkat(jb <-- jamberangkat)
+{
+	output "Masukkan Data Waktu Jam Datang Anda"
+	output "Jam: "
+	input jb.JB
+	output "Menit: "
+	input jb.MB
+	output "Detik: "
+	input jb.DB
+}
+inputan_jam_datang(jd <-- jamdatang)
+{
+	output "Masukkan Data Waktu Jam Datang Anda"
+	output "Jam: "
+	input jd.JD
+	output "Menit: "
+	input jd.MD
+	output "Detik: "
+	input jd.DD
+}

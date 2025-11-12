@@ -1,0 +1,10 @@
+//judul : balok
+//kamus 
+panj, tingg, lebr, volumenya <-- integer
+//diskripsi
+output “balok” 
+panj <-- 6
+tingg <-- 7
+lebr <-- 4
+volumenya <-- panj * lebr * tingg
+output volumenya

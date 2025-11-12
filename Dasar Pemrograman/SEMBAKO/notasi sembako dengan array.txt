@@ -1,0 +1,35 @@
+nama[5], lanjutt <-- string
+nomorHP[5] <-- long long int
+x, y, i <-- integer
+
+output "SISTEM PENDATAAN SEMBAKO"
+x <-- 0
+y <-- 0
+repeat
+{
+	if (x >= 5 and y >= 5) then
+        {
+            output "Jumlah maksimum nama dan nomor HP sudah tercapai."
+        }
+output "Masukkan nama: "
+input nama[x]
+output "Masukkan nomor HP: "
+input nomorHP[y]
+
+output "Apakah anda ingin melanjutkan? [y || Y || ya || yes]: "
+input lanjutt
+
+x <-- x + 1
+y <-- y + 1
+} until (lanjutt = "y" or lanjutt = "Y" or lanjutt = "ya" or lanjutt = "yes")
+
+output "Daftar nama dan nomor HP yang telah dimasukkan:"
+i <-- 0
+repeat
+{
+	if (i < x) then
+        {
+            output "Nama: ", nama[i], ", Nomor HP: ", nomorHP[i]
+            i <-- i + 1
+        }
+} until (i < x)

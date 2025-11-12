@@ -1,0 +1,127 @@
+//tugas daspro ADT SIM dafi
+//kamus
+//kamus ADT SIM
+//TGL
+type TGL
+{
+    tempat <-- string
+    HH, BB, TT <-- int
+}
+//NAMA
+type NAMA
+{
+    nama_pjg <-- string
+}
+//NOMOR SIM
+type NOMSIM
+{
+    nomorsim <-- long long int
+}
+//JENIS KELAMIN
+type JENIS_KELAMIN
+{
+    jk <-- string
+}
+//GOLONGAN DARAH
+type GOLONGAN_DARAH
+{
+    goldar <-- char
+}
+//ALAMAT
+type ALAMAT
+{
+    alamat, kelurahan, kecamatan <-- string
+    rt, rw <-- int
+}
+//PEKERJAAN
+type PEKERJAAN
+{
+    pekerjaan <-- string
+}
+//MASA BERLAKU SIM
+type BERLAKU
+{
+    DD, MM, YY <-- int
+}
+//JENIS KENDARAAN SIM
+type JENIS_KENDARAAN
+{
+    JKEN <-- char
+}
+//PROVINSI
+type PROVINSI
+{
+    prov <-- string
+}
+//DATA SIM
+type SIM
+{
+    jenis_kendaraan_sim <-- JENIS_KENDARAAN
+    nama_sim <-- NAMA
+    nomor_sim <-- NOMSIM
+    tgl_lahir_sim <-- TGL
+    jenis_kelamin_sim <-- JENIS_KELAMIN
+    golongan_darah_sim <-- GOLONGAN_DARAH
+    alamat_sim <-- ALAMAT
+    pekerjaan_sim <-- PEKERJAAN
+    berlaku_ktp <-- BERLAKU
+    provinsi_sim <-- PROVINSI
+}
+//INPUTAN DATA ADT SIM
+Dafi <-- SIM
+inputSIM <-- SIM
+{
+    sim <-- SIM
+    output "Inputan Data ADT SIM"
+    output "Masukkan Jenis Kendaraan SIM Anda: "
+    input Dafi.jenis_kendaraan_sim.JKEN
+    output "Masukkan Nomor SIM Anda: "
+    input Dafi.nomor_sim.nomorsim
+    output "Masukkan Nama Anda: "
+    input Dafi.nama_sim.nama_pjg
+    output "Masukkan Tempat Lahir Anda: "
+    input Dafi.tgl_lahir_sim.tempat
+    output "Masukkan Tanggal Lahir Anda: "
+    input Dafi.tgl_lahir_sim.HH
+    output "Masukkan Bulan Lahir Anda: "
+    input Dafi.tgl_lahir_sim.BB
+    output "Masukkan Tahun Lahir Anda: "
+    input Dafi.tgl_lahir_sim.TT
+    output "Masukkan Jenis Kelamin Anda: "
+    input Dafi.jenis_kelamin_sim.jk
+    output "Masukkan Golongan Darah Anda: "
+    input Dafi.golongan_darah_sim.goldar
+    output "Masukkan Alamat Anda: "
+    input Dafi.alamat_sim.alamat
+    output "Masukkan Alamat Kelurahan Anda: "
+    input Dafi.alamat_sim.kelurahan
+    output "Masukkan Alamat Kecamatan Anda: "
+    input Dafi.alamat_sim.kecamatan
+    output "Masukkan Alamat RT Anda: "
+    input Dafi.alamat_sim.rt
+    output "Masukkan Alamat RW Anda: "
+    input Dafi.alamat_sim.rw
+    output "Masukkan Pekerjaan Anda: "
+    input Dafi.pekerjaan_sim.pekerjaan
+    output "Masukkan Provinsi SIM Anda: "
+    input Dafi.provinsi_sim.prov
+    output "Masukkan Tanggal Berlaku SIM Anda: "
+    input Dafi.berlaku_sim.DD
+    output "Masukkan Bulan Berlaku SIM Anda: "
+    input Dafi.berlaku_sim.MM
+    output "Masukkan Tahun Berlaku SIM Anda: "
+    input Dafi.berlaku_sim.YY
+}
+//Diskripsi
+SIM sim <-- inputSIM
+//output untuk memverifikasi data SIM
+output "=====Data SIM Anda====="
+output Dafi.jenis_kendaraan_sim.JKEN
+output Dafi.nomor_sim.nomorsim
+output "1. ", Dafi.nama_sim.nama_pjg
+output "2. ", Dafi.tgl_lahir_sim.tempat, ", ", Dafi.tgl_lahir_sim.HH, "-", Dafi.tgl_lahir_sim.BB, "-", Dafi.tgl_lahir_sim.TT
+output "3. ", Dafi.golongan_darah_sim.goldar, " - ", Dafi.jenis_kelamin_sim.jk
+output "4. ", Dafi.alamat_sim.alamat, ", ", Dafi.alamat_sim.kelurahan, ", ", Dafi.alamat_sim.kecamatan, ", ",  Dafi.alamat_sim.rt, "/",  Dafi.alamat_sim.rw
+output "5. ", Dafi.pekerjaan_sim.pekerjaan
+output "6. ", Dafi.provinsi_sim.prov
+output "Berlaku Hingga: ", Dafi.berlaku_sim.DD, "-", Dafi.berlaku_sim.MM, "-", Dafi.berlaku_sim.YY

@@ -1,0 +1,119 @@
+//tugas daspro ADT Dafi (KTP, SIM, Sertifikat Lomba)
+//kamus untuk KTP
+KTP
+{
+    nama, nik, ttl, jk, golonganDarah, alamat, agama, status, pekerjaan, kewarganegaraan <-- string
+}
+//kamus untuk SIM
+SIM
+{
+    nama, nomor, golonganDarah, alamat, waktuBerlaku, jenisKendaraan, pekerjaan <-- string
+}
+//kamus untuk Sertifikat Lomba
+SertifikatLomba
+{
+    namaPeserta, nomor, namaLomba, asalSekolah, waktu, peringkat, tempat, penyelenggara <-- string
+}
+//inputan data KTP
+KTP inputKTP
+{
+    KTP ktp
+    output "Inputan Data KTP"
+    output "Masukkan Nama Anda: "
+    input ktp.nama
+    output "Masukkan Nomor NIK Anda: "
+    input ktp.nik
+    output "Masukkan Tempat/Tanggal Lahir Anda: "
+    input ktp.ttl
+    output "Masukkan Jenis Kelamin Anda: "
+    input ktp.jk
+    output "Masukkan Golongan Darah Anda: "
+    input ktp.golonganDarah
+    output "Masukkan Alamat Anda: "
+    input ktp.alamat
+    output "Masukkan Agama Anda: "
+    input ktp.agama
+    output "Masukkan Status Perkawinan Anda: "
+    input ktp.status
+    output "Masukkan Pekerjaan Anda: "
+    input ktp.pekerjaan
+    output "Masukkan Kewarganegaraan Anda: "
+    input ktp.kewarganegaraan
+}
+//inputan data SIM
+SIM inputSIM
+{
+    SIM sim
+    output "Inputan Data SIM"
+    output "Masukkan Nama Anda: "
+    input sim.nama
+    output "Masukkan Nomor SIM Anda: "
+    input sim.nomor
+    output "Masukkan Golongan Darah Anda: "
+    input sim.golonganDarah
+    output "Masukkan Alamat Anda: "
+    input sim.alamat
+    output "Masukkan Waktu Berlaku SIM Anda: "
+    input sim.waktuBerlaku
+    output "Masukkan Jenis Kendaraan Anda: "
+    input sim.jenisKendaraan
+    output "Masukkan Pekerjaan Anda: "
+    input sim.pekerjaan
+}
+//inputan data Sertifikat Lomba
+SertifikatLomba inputSertifikatLomba
+{
+    SertifikatLomba sertifikatlomba
+    output "Inputan Data Sertifikat Lomba"
+    output "Masukkan Nama Peserta Lomba: "
+    input sertifikatlomba.namaPeserta
+    output "Masukkan Nomor Sertifikat Lomba: "
+    input sertifikatlomba.nomor
+    output "Masukkan Nama Lomba Yang Diikutkan: "
+    input sertifikatlomba.namaLomba
+    output "Masukkan Asal Sekolah Anda: "
+    input sertifikatlomba.asalSekolah
+    output "Masukkan Waktu Acara Lomba: "
+    input sertifikatlomba.waktu
+    output "Masukkan Nomor Peringkat Lomba: "
+    input sertifikatlomba.peringkat
+    output "Masukkan Tempat Lomba Diadakan: "
+    input sertifikatlomba.tempat
+    output "Masukkan Nama Penyelenggara atau Panitia Lomba: "
+    input sertifikatlomba.penyelenggara
+}
+//Diskripsi
+KTP ktp <-- inputKTP
+SIM sim <-- inputSIM
+SertifikatLomba sertifikatlomba <-- inputSertifikatLomba
+//output untuk memverifikasi data KTP
+output "=====Data KTP Anda====="
+output "Nama: ", ktp.nama
+output "Nomor NIK: ", ktp.nik
+output "Tempat/Tanggal Lahir: ", ktp.ttl
+output "Jenis Kelamin: ", ktp.jk
+output "Golongan Darah: ", ktp.golonganDarah
+output "Alamat: ", ktp.alamat
+output "Agama: ", ktp.agama
+output "Status Perkawinan: ", ktp.status
+output "Pekerjaan: ", ktp.pekerjaan
+output "Kewarganegaraan: ", ktp.kewarganegaraan
+//output untuk memverifikasi data SIM
+output "=====Data SIM Anda====="
+output "Nama: ", sim.nama
+output "Nomor SIM: ", sim.nomor
+output "Golongan Darah: ", sim.golonganDarah
+output "Alamat: ", sim.alamat
+output "Waktu Berlaku: ", sim.waktuBerlaku
+output "Jenis Kendaraan: ", sim.jenisKendaraan
+output "Pekerjaan: ", sim.pekerjaan
+//output untuk memverifikasi data Sertifikat Lomba
+output "=====Data Sertifikat Lomba Anda====="
+output "Nama Peserta: ", sertifikatlomba.namaPeserta
+output "Nomor Sertifikat: ", sertifikatlomba.nomor
+output "Nama Lomba: ", sertifikatlomba.namaLomba
+output "Asal Sekolah: ", sertifikatlomba.asalSekolah
+output "Waktu Acara: ", sertifikatlomba.waktu
+output "Peringkat: ", sertifikatlomba.peringkat
+output "Tempat: ", sertifikatlomba.tempat
+output "Penyelenggara: ", sertifikatlomba.penyelenggara
