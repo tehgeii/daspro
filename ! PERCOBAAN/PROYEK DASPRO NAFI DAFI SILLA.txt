@@ -1,0 +1,175 @@
+#include <iostream>
+using namespace std;
+
+
+// kamus: (kamusnya banyak bjir)
+
+// kamus untuk input
+char Kodebuku,pilihan;
+int bayar,kembalian,utang;
+
+// kamus untuk individual
+string KodeA = "Buku Catatan";
+string KodeB = "Buku Novel";
+string KodeC = "Buku Pembelajaran";
+string KodeD = "Komik";
+string KodeE = "Kamus";
+string KodeF = "Ensiklopedia";
+
+// kamus untuk Harga buku dan stok nya
+int hargaA = 13000;
+int hargaB = 100000;
+int hargaC = 75000;
+int hargaD = 36000;
+int hargaE = 98000;
+int hargaF = 84000;
+
+int stokA = 10;
+int stokB = 5;
+int stokC = 7;
+int stokD = 3;
+int stokE = 4;
+int stokF = 2;
+
+// kamus untuk menghitung jumlah buku yang kita pilih
+int total_semua_buku;
+int total_semua_harga;
+
+// kamus untuk diskon
+int total_diskon;
+int total_fixdiskonA;
+int total_fixdiskonB;
+int total_fixdiskonC;
+int total_fixdiskonD;
+int total_fixdiskonE;
+int total_fixdiskonF;
+float hargadiskonA = 0.02;
+float hargadiskonB = 0.10;
+float hargadiskonC = 0.20;
+float hargadiskonD = 0.30;
+float hargadiskonE = 0.15;
+float hargadiskonF = 0.25;
+
+int main()
+{
+    total_semua_buku = 0;
+    total_semua_harga = 0;
+    total_diskon = 0;
+    total_fixdiskonA = 0;
+    total_fixdiskonB = 0;
+    total_fixdiskonC = 0;
+    total_fixdiskonD = 0;
+    total_fixdiskonE = 0;
+    total_fixdiskonF = 0;
+    do {
+        cout << " =======================================" << endl;
+        cout << "               TOKO BUKU !!!            " << endl;
+        cout << " =======================================" << endl;
+        cout << " Daftar buku: !!!" << endl;
+        cout << " A) " << KodeA << " - Harga: Rp." << hargaA << " - Stok: " << stokA << endl;
+        cout << " B) " << KodeB << " - Harga: Rp." << hargaB << " - Stok: " << stokB << endl;
+        cout << " C) " << KodeC << " - Harga: Rp." << hargaC << " - Stok: " << stokC << endl;
+        cout << " D) " << KodeD << " - Harga: Rp." << hargaD << " - Stok: " << stokD << endl;
+        cout << " E) " << KodeE << " - Harga: Rp." << hargaE << " - Stok: " << stokE << endl;
+        cout << " F) " << KodeF << " - Harga: Rp." << hargaF << " - Stok: " << stokF << endl;
+        cout << " =======================================" << endl;
+
+        cout << "Masukkan KODE buku yang Anda cari !!! " << endl;
+        cin >> Kodebuku;
+
+        cout << "" << endl;
+        if (Kodebuku == 'A' && stokA >= 1) {
+            cout << "Buku yang kamu cari adalah: " << KodeA << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaA << endl;
+            total_diskon = hargaA * hargadiskonA;
+            total_fixdiskonA = hargaA - total_diskon;
+            cout << "Harga Buku tersebut menjadi Rp." << total_fixdiskonA << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonA;
+            total_semua_buku ++;
+            stokA--;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else if (Kodebuku == 'B' && stokB >=1) {
+            cout << "Buku yang kamu cari adalah: " << KodeB << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaB << endl;
+            total_diskon = hargaB * hargadiskonB;
+            total_fixdiskonB = hargaB - total_diskon;
+            cout << "Harga Buku tersebut menjadi Rp." << total_fixdiskonB << " karena anda baru saja mendapatkan diskon 10% !" << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonB;
+            total_semua_buku ++;
+            stokB--;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else if (Kodebuku == 'C' && stokC >=1) {
+            cout << "Buku yang kamu cari adalah: " << KodeC << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaC << endl;
+            total_diskon = hargaC * hargadiskonC;
+            total_fixdiskonC = hargaC - total_diskon;
+            cout << "Harga Buku tersebut menjadi tetap yaitu Rp." << total_fixdiskonC << " karena anda baru saja mendapatkan diskon 20% !" << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonC;
+            total_semua_buku ++;
+            stokC --;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else if (Kodebuku == 'D' && stokD >=1) {
+            cout << "Buku yang kamu cari adalah: " << KodeD << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaD << endl;
+            total_diskon = hargaD * hargadiskonD;
+            total_fixdiskonD = hargaD - total_diskon;
+            cout << "Harga Buku tersebut menjadi Rp." << total_fixdiskonD << " karena anda baru saja mendapatkan diskon 30% !" << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonD;
+            total_semua_buku ++;
+            stokD --;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else if (Kodebuku == 'E' && stokE >=1) {
+            cout << "Buku yang kamu cari adalah: " << KodeE << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaE << endl;
+            total_diskon = hargaE * hargadiskonE;
+            total_fixdiskonE = hargaE - total_diskon;
+            cout << "Harga Buku tersebut menjadi Rp." << total_fixdiskonE << " karena anda baru saja mendapatkan diskon 15% !" << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonE;
+            total_semua_buku ++;
+            stokE --;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else if (Kodebuku == 'F' && stokF >=1) {
+            cout << "Buku yang kamu cari adalah: " << KodeF << "!" << endl;
+            cout << "Harga Buku tersebut Rp." << hargaF << endl;
+            total_diskon = hargaF * hargadiskonF;
+            total_fixdiskonF = hargaF - total_diskon;
+            cout << "Harga Buku tersebut menjadi Rp." << total_fixdiskonF << " karena anda baru saja mendapatkan diskon 25% !" << endl;
+            total_semua_harga = total_semua_harga + total_fixdiskonF;
+            total_semua_buku ++;
+            stokF --;
+            cout << "Buku yang kamu pilih telah tercatat !!! " << endl;
+        } else {
+            cout << "Maaf, buku tidak ditemukan atau telah habis terjual :) " << endl;
+        }
+        cout << endl;
+        cout << "apakah kamu ingin membeli buku lainnya ? atau sudah selesai?" << endl;
+        cout << "jika iya ketik (y) dan jika tidak ketik (n) " << endl;
+        cin >> pilihan;
+
+    } while (pilihan == 'Y' || pilihan == 'y' );
+
+    // memuat total semua pembelian
+    cout << endl;
+    cout << "-----------------KERANJANG BELANJA ANDA---------------" << endl;
+    cout << "Total buku yang dipilih: " << total_semua_buku << endl;
+    cout << "Total Harga yang harus anda bayar: Rp." << total_semua_harga << endl;
+    cout << endl;
+
+    cout << "-----------------LANJUT PROSES PEMBAYARAN-------------" << endl;
+    cout << "Masukkan Jumlah Uang mu: Rp.";
+    cin >> bayar;
+
+    // untuk format pembayaran
+    if (bayar == total_semua_harga) {
+        cout << "Uang Anda Pas !!!" << endl;
+    } else if (bayar > total_semua_harga) {
+        kembalian = bayar - total_semua_harga;
+        cout << "Pembayaran Lunas dan kembalian Anda sebesar: Rp." << kembalian << endl;
+    } else {
+        utang = total_semua_harga - bayar;
+        cout << "Uang Anda kurang dan Anda masih memiliki utang sebesar: Rp." << utang << endl;
+    }
+	cout << "\n";
+	cout << “Terima kasih telah berbelanja di toko buku kami !!!" << endl;
+    return 0;
+}

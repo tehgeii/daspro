@@ -1,0 +1,34 @@
+//judul: fungsi volume balok DAFI
+//kamus
+type menghitung
+{
+	panj, leb, ting <-- integer
+	hitung() <-- real
+	{
+		panj * leb * ting <-- return
+	}
+}
+inputan(menghitung & balok)
+outputan(volume <-- real)
+vol <-- real
+//diskripsi
+balok <-- menghitung
+output "menghitung volume balok"
+inputan(balok)
+vol = balok.hitung()
+outputan(vol)
+//input
+inputan(menghitung & balok)
+{
+    output "panjang: "
+    input balok.panj
+    output "lebar: "
+    input balok.leb
+    output "tinggi: "
+    input balok.ting
+}
+//output
+outputan(volume <-- real)
+{
+    output "maka total volume balok adalah: ", volume
+}

@@ -1,0 +1,93 @@
+//judul: tugas daspro ADT ijazah SMA zabrinaa
+//kamus :
+//ADT untuk Ijazah SMA
+//TGL
+type TGL
+{
+    tgll <-- string
+}
+//NAMA
+type NAMA
+{
+   nama_pjg <-- string
+}
+//NPSN
+type NPSN
+{
+    npsn <-- int
+}
+//KABUPATEN
+type KABUPATEN
+{
+    Kab <-- string
+}
+//PROVINSI
+type PROVINSI
+{
+    Prov <-- string
+}
+//NAMA_ORTUWAL
+type NAMA_ORTUWAL
+{
+    namaortuwali <-- string
+}
+//NIS
+type NIS
+{
+    nomor_nis <-- int
+}
+//NISN
+type NISN
+{
+    nomor_nisn <-- int
+}
+//DATA Ijazah SMA
+type IjazahSMA
+{
+    nama_ijazahsma <-- NAMA
+    npsn_ijazahsma <-- NPSN
+    ttl_ijazahsma <-- TGL
+    kabupaten_ijazahsma <-- KABUPATEN
+    provinsi_ijazahsma <-- PROVINSI
+    namaortuwali_ijazahsma <-- NAMA_ORTUWAL
+    nis_ijazahsma <-- NIS
+    nisn_ijazahsma <-- NISN
+
+}
+//diskripsi
+//INPUTAN DATA ADT Ijazah SMA
+zabrinaa <-- IjazahSMA 
+inputIjazahSMA <-- IjazahSMA 
+{
+    ijazahsma <-- IjazahSMA 
+    output "Inputan Data ADT IjazahSMA"
+    output "Masukkan Nama Panjang Anda: "
+    input zabrinaa.nama_ijazahsma.nama_pjg
+    output "Masukkan NPSN Anda: "
+    input zabrinaa.npsn_ijazahsma.npsn
+    output "Masukkan Tempat/Tanggal Lahir Anda: "
+    input zabrinaa.ttl_ijazahsma.tgll
+    output "Masukkan Kabupaten Anda: "
+    input zabrinaa.kabupaten_ijazahsma.Kab
+    output "Masukkan Provinsi Anda: "
+    input zabrinaa.provinsi_ijazahsma.Prov
+    output "Masukkan Nama Orang Tua Wali Anda: "
+    input zabrinaa.namaortuwali_ijazahsma.namaortuwali
+    output "Masukkan Nomor Induk Siswa Anda: "
+    input zabrinaa.nis_ijazahsma.nomor_nis
+    output "Masukkan Nomor Induk Siswa Nasional Anda: "
+    input zabrinaa.nisn_ijazahsma.nomor_nisn
+}
+{
+    inputIjazahSMA <-- IjazahSMA ijazahsma
+    //output untuk memverifikasi data IjazahSMA
+    output "=====Data IjazahSMA Anda====="
+    output "Nama Panjang: ", zabrinaa.nama_ijazahsma.nama_pjg 
+    output "Nomor NPSN: ", zabrinaa.npsn_ijazahsma.npsn
+    output "Tempat/Tanggal Lahir: ", zabrinaa.ttl_ijazahsma.tgll 
+    output "Kabupaten: ", zabrinaa.kabupaten_ijazahsma.Kab 
+    output "Provinsi: ", zabrinaa.provinsi_ijazahsma.Prov 
+    output "Nama Orang Tua Wali: ", zabrinaa.namaortuwali_ijazahsma.namaortuwali 
+    output "Nomor Induk Siswa : ", zabrinaa.nis_ijazahsma.nomor_nis 
+    output "Nomor Induk Siswa Nasional: ", zabrinaa.nisn_ijazahsma.nomor_nisn 
+}

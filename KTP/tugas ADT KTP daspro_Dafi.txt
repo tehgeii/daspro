@@ -1,0 +1,157 @@
+//tugas daspro ADT KTP dafi
+//kamus
+//kamus ADT KTP
+//TGL
+type TGL
+{
+    tempat <-- string
+    HH, BB, TT <-- int
+}
+//NAMA
+type NAMA
+{
+    nama_pjg <-- string
+}
+//NIK
+type NIK
+{
+    nik <-- long long int
+}
+//JENIS KELAMIN
+type JENIS_KELAMIN
+{
+    jk <-- string
+}
+//GOLONGAN DARAH
+type GOLONGAN_DARAH
+{
+    goldar <-- char
+}
+//ALAMAT
+type ALAMAT
+{
+    alamat, kelurahan, kecamatan <-- string
+    rt, rw <-- int
+}
+//AGAMA
+type AGAMA
+{
+    agama <-- string
+}
+//STATUS PERKAWINAN
+type PERKAWINAN
+{
+    perkawinan <-- string
+}
+//PEKERJAAN
+type PEKERJAAN
+{
+    pekerjaan <-- string
+}
+//KEWARGANEGARAAN
+type KEWARGANEGARAAN
+{
+    kewarganegaraan <-- string
+}
+//MASA BERLAKU KTP
+type BERLAKU
+{
+    berlaku <-- string
+}
+//DIBUATNYA KTP
+type DIBUAT
+{
+    kota, provinsi, kabupaten <-- string
+    DD, MM, YY <-- int
+}
+//DATA KTP
+type KTP
+{
+    nama_ktp <-- NAMA
+    nomor_nik <-- NIK
+    tgl_lahir_ktp <-- TGL
+    jenis_kelamin_ktp <-- JENIS_KELAMIN
+    golongan_darah_ktp <-- GOLONGAN_DARAH
+    alamat_ktp <-- ALAMAT
+    agama_ktp <-- AGAMA
+    perkawinan_ktp <-- PERKAWINAN
+    pekerjaan_ktp <-- PEKERJAAN
+    kewarganegaraan_ktp <-- KEWARGANEGARAAN
+    berlaku_ktp <-- BERLAKU
+    dibuat_ktp <-- DIBUAT
+}
+//INPUTAN DATA ADT KTP
+Dafi <-- KTP
+inputKTP <-- KTP
+{
+    ktp <-- KTP
+    output "Inputan Data ADT KTP"
+    output "Masukkan Nama Anda: "
+    input Dafi.nama_ktp.nama_pjg
+    output "Masukkan Nomor NIK Anda: "
+    input Dafi.nomor_nik.nik
+    output "Masukkan Provinsi KTP Anda: "
+    input Dafi.dibuat_ktp.provinsi
+    output "Masukkan Kabupaten KTP Anda: "
+    input Dafi.dibuat_ktp.kabupaten
+    output "Masukkan Tempat Lahir Anda: "
+    input Dafi.tgl_lahir_ktp.tempat
+    output "Masukkan Tanggal Lahir Anda: "
+    input Dafi.tgl_lahir_ktp.HH
+    output "Masukkan Bulan Lahir Anda: "
+    input Dafi.tgl_lahir_ktp.BB
+    output "Masukkan Tahun Lahir Anda: "
+    input Dafi.tgl_lahir_ktp.TT
+    output "Masukkan Jenis Kelamin Anda: "
+    input Dafi.jenis_kelamin_ktp.jk
+    output "Masukkan Golongan Darah Anda: "
+    input Dafi.golongan_darah_ktp.goldar
+    output "Masukkan Alamat Anda: "
+    input Dafi.alamat_ktp.alamat
+    output "Masukkan Alamat Kelurahan Anda: "
+    input Dafi.alamat_ktp.kelurahan
+    output "Masukkan Alamat Kecamatan Anda: "
+    input Dafi.alamat_ktp.kecamatan
+    output "Masukkan Alamat RT Anda: "
+    input Dafi.alamat_ktp.rt
+    output "Masukkan Alamat RW Anda: "
+    input Dafi.alamat_ktp.rw
+    output "Masukkan Agama Anda: "
+    input Dafi.agama_ktp.agama
+    output "Masukkan Status Perkawinan Anda: "
+    input Dafi.perkawinan_ktp.perkawinan
+    output "Masukkan Pekerjaan Anda: "
+    input Dafi.pekerjaan_ktp.pekerjaan
+    output "Masukkan Kewarganegaraan Anda: "
+    input Dafi.kewarganegaraan_ktp.kewarganegaraan
+    output "Masukkan Masa Berlaku KTP Anda: "
+    input Dafi.berlaku_ktp.berlaku
+    output "Masukkan Tempat KTP Dibuat: "
+    input Dafi.dibuat_ktp.kota
+    output "Masukkan Tanggal Waktu KTP Dibuat: "
+    input Dafi.dibuat_ktp.DD
+    output "Masukkan Bulan Waktu KTP Dibuat: "
+    input Dafi.dibuat_ktp.MM
+    output "Masukkan Tahun Waktu KTP Dibuat: "
+    input Dafi.dibuat_ktp.YY
+}
+//Diskripsi
+KTP ktp <-- inputKTP
+//output untuk memverifikasi data KTP
+output "=====Data KTP Anda====="
+output "PROVINSI: ", Dafi.dibuat_ktp.provinsi
+output "KABUPATEN: ", Dafi.dibuat_ktp.kabupaten
+output "NIK: ", Dafi.nomor_nik.nik
+output "Nama: ", Dafi.nama_ktp.nama_pjg
+output "Tempat/Tgl Lahir: ", Dafi.tgl_lahir_ktp.tempat, ", ", Dafi.tgl_lahir_ktp.HH, "-", Dafi.tgl_lahir_ktp.BB, "-", Dafi.tgl_lahir_ktp.TT
+output "Jenis Kelamin: ", Dafi.jenis_kelamin.jk, "         Gol Darah: ", Dafi.golongan_darah_ktp.goldar
+output "Alamat: ", Dafi.alamat_ktp.alamat
+output "   RT/RW: ", Dafi.alamat_ktp.rt, "/", Dafi.alamat_ktp.rw
+output "   Kelurahan: ", Dafi.alamat_ktp.kelurahan
+output "   Kecamatan: ", Dafi.alamat_ktp.kecamatan
+output "Agama: ", Dafi.agama_ktp.agama
+output "Status Perkawinan: ", Dafi.perkawinan_ktp.perkawinan
+output "Pekerjaan: ", Dafi.pekerjaan_ktp.pekerjaan
+output "Kewarganegaraan: ", Dafi.kewarganegaraan_ktp.kewarganegaraan
+output "Berlaku Hingga: ", Dafi.berlaku_ktp.berlaku
+output "Dibuat Di: ", Dafi.dibuat_ktp.kota, ", ", Dafi.dibuat_ktp.DD, "-", Dafi.dibuat_ktp.MM, "-", Dafi.dibuat_ktp.YY

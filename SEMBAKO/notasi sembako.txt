@@ -1,0 +1,16 @@
+nama, lanjutt <-- string
+nomorHP <-- long long int
+
+output "SISTEM PENDATAAN SEMBAKO"
+repeat
+{
+	output "Masukkan nama: "
+        input nama
+        output "Masukkan nomor HP: "
+        input nomorHP
+
+        output "Apakah anda ingin melanjutkan? [y || Y || ya || yes]: "
+        input lanjutt
+} until (lanjutt = "y" or lanjutt = "Y" or lanjutt = "ya" or lanjutt = "yes")
+output "Daftar nama dan nomor HP yang telah dimasukkan:"
+output "Nama: ", nama, ", ", "Nomor HP: ", nomorHP

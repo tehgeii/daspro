@@ -1,0 +1,1032 @@
+
+kasusnya adalah toko buku, kita sebagai konsumen menginginkan suatu buku dengan ciri-ciri yang spesifik, dan kalo semisal buku yang dicari tidak ada, bisa dikatakan sudah habis terjual atau buku yang dicari tidak ada. terus ada notasi dan codingan.
+
+// judul:	 PAK PUSING 7 KELILING PAK  !!!!
+
+
+// kamus:
+// kamus untuk input
+kodebuku, pilihan, tas <-- character
+bayar, kembalian, utang, piljudul, pengantar, tas_belanja <-- integer
+
+// kamus untuk individual
+string
+KodeA = “Buku Catatan”
+KodeB = “Buku Novel”
+KodeC = “Buku Pembelajaran”
+KodeD = “Komik”
+KodeE = “Kamus”
+KodeF = “Ensiklopedia”
+
+//kamus untuk judul Buku catatan
+string
+judulcatatan1 = “notebook”
+judulcatatan2 = “blinder”
+judulcatatan3 = “spiral”
+judulcatatan4 = “lucu”
+judulcatatan5 = “kulit”
+
+//kamus untuk judul buku novel
+string
+judulnovel1 = “dikta dan hukum”
+judulnovel2 = “dilan 1990”
+judulnovel3 = “laskar pelangi”
+judulnovel4 = “5 cm”
+judulnovel5 = “ayat ayat cinta”
+
+//kamus untuk judul buku pembelajaran
+string
+judulpelajaran1 = “IPA”
+judulpelajaran2 = “IPS”
+judulpelajaran3 = “PAI”
+judulpelajaran4 = “BAHASA INDONESIA”
+judulpelajaran5 = “MATEMATIKA”
+
+//kamus untuk judul komik
+string
+judulkomik1 = “one piece”
+judulkomik2 = “naruto”
+judulkomik3 = “detektif conan”
+judulkomik4 = “attack on titan”
+judulkomik5 = “death note”
+
+//kamus untuk judul kamus
+string
+judulkamus1 = “bahasa indonesia”
+judulkamus2 = “bahasa inggris”
+judulkamus3 = “bahasa mandarin”
+judulkamus4 = “bahasa jepang”
+judulkamus5 = “bahasa rusia
+
+//kamus untuk judul ensiklopedia
+string
+judulensiklopedia1 = “jurnal”
+judulensiklopedia2 = “anak”
+judulensiklopedia3 = “sains”
+judulensiklopedia4 = “islam”
+judulensiklopedia5 = “biografi”
+
+// kamus untuk jumlah stok untuk tiap buku
+integer
+stokA = 645
+stokB = 1854
+stokC = 319
+stokD = 225
+stokE = 548
+stokF = 144
+
+//kamus untuk harga buku catatan
+integer
+HBC1 = 25000
+HBC2 = 32000
+HBC3 = 10000
+HBC4 = 80000
+HBC5 = 45000
+
+//kamus untuk harga buku novel
+integer
+HBN1 = 100000
+HBN2 = 198000
+HBN3 = 200000
+HBN4 = 170000
+HBN5 = 116000
+
+//kamus untuk harga buku pembelajaran
+integer
+HBP1 = 165000
+HBP2 = 108000
+HBP3 = 139000
+HBP4 = 81000
+HBP5 = 90000
+
+//kamus untuk harga buku komik
+integer
+HBKOM1 = 35000
+HBKOM2 = 25000
+HBKOM3 = 40000
+HBKOM4 = 55000
+HBKOM5 = 88000
+
+//kamus untuk harga buku kamus
+integer
+HBKAM1 = 100000
+HBKAM2 = 200000
+HBKAM3 = 250000
+HBKAM4 = 175000
+HBKAM5 = 300000
+
+//kamus untuk harga buku ensiklopedia
+integer
+HBE1 = 100000
+HBE2 = 200000
+HBE3 = 250000
+HBE4 = 175000
+HBE5 = 300000
+
+//kamus untuk menghitung jumlah buku yang kita pilih
+total_semua_buku, total_semua_harga, total_diskon <-- integer
+
+//kamus untuk diskon A
+integer
+total_fixdiskonA1
+total_fixdiskonA2
+total_fixdiskonA3
+total_fixdiskonA4
+total_fixdiskonA5
+
+//kamus untuk diskon B
+integer
+total_fixdiskonB1
+total_fixdiskonB2
+total_fixdiskonB3
+total_fixdiskonB4
+total_fixdiskonB5
+
+//kamus untuk diskon C
+interger
+total_fixdiskonC1
+total_fixdiskonC2
+total_fixdiskonC3
+total_fixdiskonC4
+total_fixdiskonC5
+
+//kamus untuk diskon D
+integer
+total_fixdiskonD1
+total_fixdiskonD2
+total_fixdiskonD3
+total_fixdiskonD4
+total_fixdiskonD5
+
+//kamus untuk diskon E
+integer
+total_fixdiskonE1
+total_fixdiskonE2
+total_fixdiskonE3
+total_fixdiskonE4
+total_fixdiskonE5
+
+//kamus untuk diskon F
+integer
+total_fixdiskonF1
+total_fixdiskonF2
+total_fixdiskonF3
+total_fixdiskonF4
+total_fixdiskonF5
+
+//kamus untuk diskon
+float
+hargadiskonA = 0,02
+hargadiskonB = 0,10
+hargadiskonC = 0,20
+hargadiskonD = 0,30
+hargadiskonE = 0,15
+hargadiskonF = 0,25
+
+//kamus untuk metode pembayaran
+string
+transfer = “Transfer”
+kredit = “Kredit”
+Ewallet = “Ewallet”
+COD = “COD”
+minimarket = “minimarket”
+metode <-- integer
+
+//kamus biaya pengiriman
+integer
+total_pengiriman
+JNT = 18000
+JNE = 12000
+SICEPAT = 10000
+NINJA_Expres = 15000
+Pos_Indonesia = 80000
+
+//kamus untuk metode pengiriman
+pengiriman <-- char
+
+//kamus untuk bank
+string
+bank1 = “BCA”
+bank2 = “BRI”
+bank3 = “BNI”
+bank4 = “Mandiri”
+bank5 = “Danamon”
+milihbank <-- integer
+
+//kamus untuk kredit
+nomerkredit, kode_CVV <-- integer
+namakredit, tgl_lahir <-- string
+
+//kamus untuk pembayaran E-wallet
+milih_wallet, nomer_tlp, pin <-- integer
+
+//diskripsi
+total_semua_buku <--  0
+total_semua_harga <--  0
+total_diskon <--  0
+total_fixdiskonA1 <--  0
+total_fixdiskonA2 <--  0
+total_fixdiskonA3 <--  0
+total_fixdiskonA4 <--  0
+total_fixdiskonA5 <--  0
+total_fixdiskonB1 <--  0
+total_fixdiskonB2 <--  0
+total_fixdiskonB3 <--  0
+total_fixdiskonB4 <--  0
+total_fixdiskonB5 <--  0
+total_fixdiskonC1 <--  0
+total_fixdiskonC2 <--  0
+total_fixdiskonC3 <--  0
+total_fixdiskonC4 <--  0
+total_fixdiskonC5 <--  0
+total_fixdiskonD1 <--  0
+total_fixdiskonD2 <--  0
+total_fixdiskonD3 <--  0
+total_fixdiskonD4 <--  0
+total_fixdiskonD5 <--  0
+total_fixdiskonE1 <--  0
+total_fixdiskonE2 <--  0
+total_fixdiskonE3 <--  0
+total_fixdiskonE4 <--  0
+total_fixdiskonE5 <--  0
+total_fixdiskonF1 <--  0
+total_fixdiskonF2 <--  0
+total_fixdiskonF3 <--  0
+total_fixdiskonF4 <--  0
+total_fixdiskonF5 <--  0
+total_pengiriman <--  0
+
+repeat
+{
+output " ======================================="
+output "               TOKO BUKU !!!            "
+output " ======================================="
+output " Daftar buku: !!!"
+output " A) " KodeA " - Harga: Rp." hargaA " - Stok: " stokA
+output " B) " KodeB " - Harga: Rp." hargaB " - Stok: " stokB
+output " C) " KodeC " - Harga: Rp." hargaC " - Stok: " stokC
+output " D) " KodeD " - Harga: Rp." hargaD " - Stok: " stokD
+output " E) " KodeE " - Harga: Rp." hargaE " - Stok: " stokE
+output " F) " KodeF " - Harga: Rp." hargaF " - Stok: " stokF
+
+output “Masukkan KODE buku yang Anda cari !!!”
+input KodeBuku
+
+output “\n”
+
+if ((Kodebuku = 'A') atau (Kodebuku = 'a')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulcatatan1, “-Harga Rp.”, HBC1
+	output “2.”, judulcatatan2, “-Harga Rp.”, HBC2
+	output “3.”, judulcatatan3, “-Harga Rp.”, HBC3
+	output “4.”, judulcatatan4, “-Harga Rp.”, HBC4
+	output “5.”, judulcatatan5, “-Harga Rp.”, HBC5
+} else if ((Kodebuku = 'B') atau (Kodebuku = 'b')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulnovel1, “-Harga Rp.”, HBN1
+	output “2.”, judulnovel2, “-Harga Rp.”, HBN2
+	output “3.”, judulnovel3, “-Harga Rp.”, HBN3
+	output “4.”, judulnovel4, “-Harga Rp.”, HBN4
+	output “5.”, judulnovel5, “-Harga Rp.”, HBN5
+} else if ((Kodebuku = 'C') atau (Kodebuku = 'c')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulpelajaran1, “-Harga Rp.”, HBP1
+	output “2.”, judulpelajaran2, “-Harga Rp.”, HBP2
+	output “3.”, judulpelajaran3, “-Harga Rp.”, HBP3
+	output “4.”, judulpelajaran4, “-Harga Rp.”, HBP4
+	output “5.”, judulpelajaran5, “-Harga Rp.”, HBP5
+} else if ((Kodebuku = 'D') atau (Kodebuku = 'd')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulkomik1, “-Harga Rp.”, HBKOM1
+	output “2.”, judulkomik2, “-Harga Rp.”, HBKOM2
+	output “3.”, judulkomik3, “-Harga Rp.”, HBKOM3
+	output “4.”, judulkomik4, “-Harga Rp.”, HBKOM4
+	output “5.”, judulkomik5, “-Harga Rp.”, HBKOM5
+} else if ((Kodebuku = 'E') atau (Kodebuku = 'e')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulkamus1, “-Harga Rp.”, HBKAM1
+	output “2.”, judulkamus2, “-Harga Rp.”, HBKAM2
+	output “3.”, judulkamus3, “-Harga Rp.”, HBKAM3
+	output “4.”, judulkamus4, “-Harga Rp.”, HBKAM4
+	output “5.”, judulkamus5, “-Harga Rp.”, HBKAM5
+} else if ((Kodebuku = 'F') atau (Kodebuku = 'f')) then
+{
+	output "========================================================"
+	output "silahkan pilih judul/type buku yang ingin anda beli !!! "
+	output "========================================================"
+	output “Buku apa yang anda pilih ?”
+	output “1.”, judulensiklopedia1, “-Harga Rp.”, HBKAM1
+	output “2.”, judulensiklopedia2, “-Harga Rp.”, HBKAM2
+	output “3.”, judulensiklopedia3, “-Harga Rp.”, HBKAM3
+	output “4.”, judulensiklopedia4, “-Harga Rp.”, HBKAM4
+	output “5.”, judulensiklopedia5, “-Harga Rp.”, HBKAM5
+} else
+{
+	output "MAAF BUKU YANG ANDA CARI TIDAK DITEMUKAN"
+}
+
+output “masukan nomer buku yang ingin kamu beli !!!”
+input piljudul
+
+pengantar <-- 0
+if (Kodebuku = ‘A’ atau Kodebuku = ‘a’), pengantar  = 1
+else if (Kodebuku = ‘B’ atau Kodebuku = ‘b’), pengantar  = 2
+else if (Kodebuku = ‘C’ atau Kodebuku = ‘c’), pengantar  = 3
+else if (Kodebuku = ‘D’ atau Kodebuku = ‘d’), pengantar  = 4
+else if (Kodebuku = ‘E’ atau Kodebuku = ‘e’), pengantar  = 5
+else if (Kodebuku = ‘F’ atau Kodebuku = ‘f’), pengantar  = 6
+
+if (pengantar = 1) then {
+	if (piljudul  = 1) then {
+		output “Buku yang kamu pilih adalah: “, judulcatatan1
+		output “Harga buku tersebut adalah Rp.”, HBC1
+		total_diskon <-- HBC1 * hargadiskonA
+		total_fixdiskonA1 <-- HBC1 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 2%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonA1
+		total_semua_harga <-- total_semua_harga + total_fixdiskonA1
+		total_semua_buku <-- total_semua_buku +1
+		stokA <-- stokA-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 2) then {
+		output “Buku yang kamu pilih adalah: “, judulcatatan2
+		output “Harga buku tersebut adalah Rp.”, HBC2
+		total_diskon <-- HBC2 * hargadiskonA
+		total_fixdiskonA2 <-- HBC2 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 2%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonA2
+		total_semua_harga <-- total_semua_harga + total_fixdiskonA2
+		total_semua_buku <-- total_semua_buku +1
+		stokA <-- stokA-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 3) then {
+		output “Buku yang kamu pilih adalah: “, judulcatatan3
+		output “Harga buku tersebut adalah Rp.”, HBC3
+		total_diskon <-- HBC3 * hargadiskonA
+		total_fixdiskonA3 <-- HBC3 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 2%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonA3
+		total_semua_harga <-- total_semua_harga + total_fixdiskonA3
+		total_semua_buku <-- total_semua_buku +1
+		stokA <-- stokA-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 4) then {
+		output “Buku yang kamu pilih adalah: “, judulcatatan4
+		output “Harga buku tersebut adalah Rp.”, HBC4
+		total_diskon <-- HBC4 * hargadiskonA
+		total_fixdiskonA4 <-- HBC4 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 2%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonA4
+		total_semua_harga <-- total_semua_harga + total_fixdiskonA4
+		total_semua_buku <-- total_semua_buku +1
+		stokA <-- stokA-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 5) then {
+		output “Buku yang kamu pilih adalah: “, judulcatatan5
+		output “Harga buku tersebut adalah Rp.”, HBC5
+		total_diskon <-- HBC5 * hargadiskonA
+		total_fixdiskonA5 <-- HBC5 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 2%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonA5
+		total_semua_harga <-- total_semua_harga + total_fixdiskonA5
+		total_semua_buku <-- total_semua_buku +1
+		stokA <-- stokA-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else {
+		output “Buku yang kamu cari tidak ada”
+	}
+} else if (pengantar = 2) then {
+	if (piljudul  = 1) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel1
+		output “Harga buku tersebut adalah Rp.”, HBN1
+		total_diskon <-- HBN1 * hargadiskonB
+		total_fixdiskonB1 <-- HBN1 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB1
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB1
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 2) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel2
+		output “Harga buku tersebut adalah Rp.”, HBN2
+		total_diskon <-- HBN2 * hargadiskonB
+		total_fixdiskonB2 <-- HBN2 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB2
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB2
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 3) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel3
+		output “Harga buku tersebut adalah Rp.”, HBN3
+		total_diskon <-- HBN3 * hargadiskonB
+		total_fixdiskonB3 <-- HBN3 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB3
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB3
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 4) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel4
+		output “Harga buku tersebut adalah Rp.”, HBN4
+		total_diskon <-- HBN4 * hargadiskonB
+		total_fixdiskonB4 <-- HBN4 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB4
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB4
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 5) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel5
+		output “Harga buku tersebut adalah Rp.”, HBN5
+		total_diskon <-- HBN5 * hargadiskonB
+		total_fixdiskonB5 <-- HBN5 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB5
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB5
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else {
+		output “Buku yang kamu cari tidak ada”
+	}
+} else if (pengantar = 3) then {
+	if (piljudul  = 1) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel1
+		output “Harga buku tersebut adalah Rp.”, HBN1
+		total_diskon <-- HBN1 * hargadiskonB
+		total_fixdiskonB1 <-- HBN1 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB1
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB1
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 2) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel2
+		output “Harga buku tersebut adalah Rp.”, HBN2
+		total_diskon <-- HBN2 * hargadiskonB
+		total_fixdiskonB2 <-- HBN2 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB2
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB2
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 3) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel3
+		output “Harga buku tersebut adalah Rp.”, HBN3
+		total_diskon <-- HBN3 * hargadiskonB
+		total_fixdiskonB3 <-- HBN3 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB3
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB3
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 4) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel4
+		output “Harga buku tersebut adalah Rp.”, HBN4
+		total_diskon <-- HBN4 * hargadiskonB
+		total_fixdiskonB4 <-- HBN4 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB4
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB4
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else if (piljudul = 5) then {
+		output “Buku yang kamu pilih adalah: “, judulnovel5
+		output “Harga buku tersebut adalah Rp.”, HBN5
+		total_diskon <-- HBN5 * hargadiskonB
+		total_fixdiskonB5 <-- HBN5 - total_diskon
+		output “Selamat Anda mendapatkan Diskon sebesar 10%”
+		output “Harga Buku menjadi Rp/”, total_fixdiskonB5
+		total_semua_harga <-- total_semua_harga + total_fixdiskonB5
+		total_semua_buku <-- total_semua_buku +1
+		stokB <-- stokB-1
+		output “Buku yang kamu pilih telah tercatat !!!”
+	} else {
+		output “Buku yang kamu cari tidak ada”
+	} 
+else if (pengantar ← 3) {
+            if (piljudul ← 1) {
+                output  "Buku yang kamu pilih adalah : " judulpelajaran1 
+                output "Harga buku tersebut adalah Rp." HBP1 
+                total_diskon ← HBP1 * hargadiskonC
+                total_fixdiskonC1 ← HBP1 - total_diskon
+                output  "Selamat Anda mendapatkan Diskon sebesar 20% "
+                output  "Harga Buku menjadi Rp."  total_fixdiskonC1
+                total_semua_harga ← total_semua_harga + total_fixdiskonC1
+                total_semua_buku ++
+                stokC--
+                output  "Buku yang kamu pilih telah tercatat !!! "
+}
+else if (piljudul ← 2) {
+                output "Buku yang kamu pilih adalah : " judulpelajaran
+                output  "Harga buku tersebut adalah Rp."  HBP2;
+                total_diskon ← HBP2 * hargadiskonC
+                total_fixdiskonC2 ← HBP2 - total_diskon
+                output  "Selamat Anda mendapatkan Diskon sebesar 20% "
+                output "Harga Buku menjadi Rp."  total_fixdiskonC2
+                total_semua_harga ← total_semua_harga + total_fixdiskonC2
+                total_semua_buku ++
+                stokC--
+                output ← "Buku yang kamu pilih telah tercatat !!! " 
+}
+else if (piljudul ← 3) {
+                output  "Buku yang kamu pilih adalah : "  judulpelajaran”
+                output "Harga buku tersebut adalah Rp."HBP3
+                total_diskon ← HBP3 * hargadiskonC
+                total_fixdiskonC3 ← HBP3 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 20% " 
+                output "Harga Buku menjadi Rp."  total_fixdiskonC3 
+                total_semua_harga ← total_semua_harga + total_fixdiskonC3
+                total_semua_buku ++
+                stokC--
+                output "Buku yang kamu pilih telah tercatat !!! " 
+}
+else if (piljudul ← 4) {
+                output  "Buku yang kamu pilih adalah : "  judulpelajaran4
+                output "Harga buku tersebut adalah Rp.” HBP4 
+                total_diskon ←HBP4 * hargadiskonC
+                total_fixdiskonC4 ← HBP4 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 20% " 
+                output "Harga Buku menjadi Rp.” total_fixdiskonC4
+                total_semua_harga ← total_semua_harga + total_fixdiskonC4
+                total_semua_buku ++
+                stokC--
+                output  "Buku yang kamu pilih telah tercatat !!! "
+  } 
+else if (piljudul ← 5) {
+                output  "Buku yang kamu pilih adalah : " judulpelajaran5 
+                output "Harga buku tersebut adalah Rp." HBP5 
+                total_diskon ← HBP5 * hargadiskonC
+                total_fixdiskonC5 ← HBP5 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 20% "  
+                output "Harga Buku menjadi Rp."  total_fixdiskonC5 
+                total_semua_harga ← total_semua_harga + total_fixdiskonC5
+                total_semua_buku ++
+                stokC--
+                output "Buku yang kamu pilih telah tercatat !!! "
+  } else {
+                output "Buku yang kamu cari tidak ada "
+}
+else if (pengantar ← 4) 
+{
+            if (piljudul ← 1) {
+                output "Buku yang kamu pilih adalah : "judulkomik1
+                output "Harga buku tersebut adalah Rp." HBKOM1
+                total_diskon  ← HBKOM1 * hargadiskonD
+                total_fixdiskonD1 ← HBKOM1 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 30% " 
+                output "Harga Buku menjadi Rp." total_fixdiskonD1
+                total_semua_harga ← total_semua_harga + total_fixdiskonD1
+                total_semua_buku ++
+                stokD--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            } else if (piljudul ← 2) {
+                output "Buku yang kamu pilih adalah : " judulkomik2 
+                output "Harga buku tersebut adalah Rp."  HBKOM2 
+                total_diskon ← HBKOM2 * hargadiskonD
+                total_fixdiskonD2 ← HBKOM2 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 30% "
+                output "Harga Buku menjadi Rp." total_fixdiskonD2 
+                total_semua_harga ← total_semua_harga + total_fixdiskonD2
+                total_semua_buku ++
+                stokD--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            }
+else if (piljudul ← 3) {
+                output "Buku yang kamu pilih adalah : "  judulkomik3 
+                output "Harga buku tersebut adalah Rp." HBKOM3 
+                total_diskon ← HBKOM3 * hargadiskonD
+                total_fixdiskonD3 ← HBKOM3 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 30% "  
+                output "Harga Buku menjadi Rp."  total_fixdiskonD3 
+                total_semua_harga ← total_semua_harga + total_fixdiskonD3
+                total_semua_buku ++
+                stokD--
+                output "Buku yang kamu pilih telah tercatat !!! "
+} 
+else if (piljudul ← 4) {
+                output "Buku yang kamu pilih adalah : "  judulkomik4
+                output "Harga buku tersebut adalah Rp." HBKOM4
+                total_diskon ← HBKOM4 * hargadiskonD
+                total_fixdiskonD4 ← HBKOM4 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 30% "
+                output "Harga Buku menjadi Rp."  total_fixdiskonD4 
+                total_semua_harga ← total_semua_harga + total_fixdiskonD4
+                total_semua_buku ++
+                stokD--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            }
+ else if (piljudul ← 5) {
+                output "Buku yang kamu pilih adalah : " judulkomik5
+                output "Harga buku tersebut adalah Rp." HBKOM5
+                total_diskon ← HBKOM5 * hargadiskonD
+                total_fixdiskonD5 = HBKOM5 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 30% "  
+                output "Harga Buku menjadi Rp." total_fixdiskonD5
+                total_semua_harga ← total_semua_harga + total_fixdiskonD5
+                total_semua_buku ++
+                stokD--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            } else {
+                output  "Buku yang kamu cari tidak ada " 
+            }
+        	} 
+else if (pengantar ← 5) {
+            if (piljudul ← 1) {
+                output "Buku yang kamu pilih adalah : " judulkamus1 
+                output "Harga buku tersebut adalah Rp."  HBKAM1
+                total_diskon ← HBKAM1 * hargadiskonE
+                total_fixdiskonE1 ← HBKAM1 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 15% "
+                output "Harga Buku menjadi Rp."  total_fixdiskonE1
+                total_semua_harga ← total_semua_harga + total_fixdiskonE1
+                total_semua_buku ++
+                stokE--
+                output "Buku yang kamu pilih telah tercatat !!! "
+	}
+	else if (piljudul ← 2) {
+                output "Buku yang kamu pilih adalah : " judulkamus2
+                output "Harga buku tersebut adalah Rp." HBKAM2
+                total_diskon ← HBKAM2 * hargadiskonE
+                total_fixdiskonE2 ← HBKAM2 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 15% " 
+                output "Harga Buku menjadi Rp." total_fixdiskonE2
+                total_semua_harga ← total_semua_harga + total_fixdiskonE2
+                total_semua_buku ++
+                stokE--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            }
+else if (piljudul ← 3) {
+                output "Buku yang kamu pilih adalah : "  judulkamus3
+                output "Harga buku tersebut adalah Rp." HBKAM3
+                total_diskon ← HBKAM3 * hargadiskonE
+                total_fixdiskonE3 ← HBKAM3 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 15% " 
+                output "Harga Buku menjadi Rp."  total_fixdiskonE3
+                total_semua_harga ← total_semua_harga + total_fixdiskonE3
+                total_semua_buku ++
+                stokE--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            } 
+else if (piljudul ← 4) {
+                output "Buku yang kamu pilih adalah : " judulkamus4
+                output "Harga buku tersebut adalah Rp." HBKAM4 
+                total_diskon ← HBKAM4 * hargadiskonE
+                total_fixdiskonE4 ←HBKAM4 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 15% "
+                output "Harga Buku menjadi Rp."  total_fixdiskonE4
+                total_semua_harga ← total_semua_harga + total_fixdiskonE4
+                total_semua_buku ++
+                stokE--
+                cout "Buku yang kamu pilih telah tercatat !!! "
+	}
+	else if (piljudul ← 5) {
+                output "Buku yang kamu pilih adalah : "  judulkamus5
+                output "Harga buku tersebut adalah Rp." HBKAM5
+                total_diskon ← HBKAM5 * hargadiskonE
+                total_fixdiskonE5 ← HBKAM5 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 15% "
+                output "Harga Buku menjadi Rp."  total_fixdiskonE5
+                total_semua_harga ← total_semua_harga + total_fixdiskonE5
+                total_semua_buku ++
+                stokE--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            } else {
+                output "Buku yang kamu cari tidak ada "
+            }
+        } 
+else if (pengantar ← 6) {
+            if (piljudul ← 1) {
+                output "Buku yang kamu pilih adalah : "  judulensiklopedia1
+                output "Harga buku tersebut adalah Rp." HBE1
+                total_diskon ← HBE1 * hargadiskonF
+                total_fixdiskonF1 ← HBE1 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 25% "
+                output "Harga Buku menjadi Rp." total_fixdiskonF1
+                total_semua_harga ← total_semua_harga + total_fixdiskonF1
+                total_semua_buku ++
+                stokF--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            } 
+else if (piljudul ← 2) {
+                output  "Buku yang kamu pilih adalah : "  judulensiklopedia2 
+                output "Harga buku tersebut adalah Rp." HBE2
+                total_diskon ← HBE2 * hargadiskonF
+                total_fixdiskonF2 ← HBE2 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 25% " 
+                output "Harga Buku menjadi Rp." total_fixdiskonF2
+                total_semua_harga ← total_semua_harga + total_fixdiskonF2
+                total_semua_buku ++
+                stokF--
+                output "Buku yang kamu pilih telah tercatat !!! "
+	}
+	else if (piljudul ← 3) {
+                output "Buku yang kamu pilih adalah : "judulensiklopedia3 
+                output "Harga buku tersebut adalah Rp." HBE3 
+                total_diskon ← HBE3 * hargadiskonF
+                total_fixdiskonF3 ← HBE3 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 25% " 
+                output "Harga Buku menjadi Rp."  total_fixdiskonF3 
+                total_semua_harga ← total_semua_harga + total_fixdiskonF3
+                total_semua_buku ++
+                stokF--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            }
+ else if (piljudul ← 4) {
+                output "Buku yang kamu pilih adalah : "  judulensiklopedia4 
+                output "Harga buku tersebut adalah Rp." HBE4
+                total_diskon ← HBE4 * hargadiskonF
+                total_fixdiskonF4 ← HBE4 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 25% " 
+                output "Harga Buku menjadi Rp."  total_fixdiskonF4 
+                total_semua_harga ← total_semua_harga + total_fixdiskonF4
+                total_semua_buku ++
+                stokF--
+                output "Buku yang kamu pilih telah tercatat !!! "
+            }
+ else if (piljudul ← 5) {
+                output "Buku yang kamu pilih adalah : " judulensiklopedia5 
+                output "Harga buku tersebut adalah Rp." HBE5
+                total_diskon ← HBE5 * hargadiskonF
+                total_fixdiskonF5 ← HBE1 - total_diskon
+                output "Selamat Anda mendapatkan Diskon sebesar 25% "
+                output  "Harga Buku menjadi Rp."  total_fixdiskonF5
+                total_semua_harga  total_semua_harga + total_fixdiskonF5
+                total_semua_buku ++
+                stokF--
+                output  "Buku yang kamu pilih telah tercatat !!! " 
+            } else {
+                output "Buku yang kamu cari tidak ada "
+            }
+        }
+  
+        output "apakah kamu ingin membeli buku lainnya ? atau sudah selesai”
+        output "jika iya ketik (y) dan jika tidak ketik (n) " 
+        input pilihan
+	} until (pilihan ← 'Y' atau pilihan ← 'y' )
+
+    output "Apakah Anda ingin Menggunakan Tas belanja ? "
+    output "jika iya ketik (Y) dan jika tidak ketik (n) "
+    input tas
+
+    if (tas ← 'y' atau tas ← 'Y') then {
+        tas_belanja ← 5000
+    } else {
+        tas_belanja ← 0
+    }
+
+    output  "================================" 
+    output  "   Masukan metode pengiriman :  " 
+    output "================================" 
+    output "A) JNT  -Rp." , JNT 
+    output "B) JNE  -Rp." , JNE
+    output "C)SICEPAT  -Rp." ,SiCEPAT 
+    output "D) NINJA EXPRES  -Rp." ,NINJA_Expres 
+    output "E) Pos Indonesia  -Rp.", Pos_Indonesia
+    output "================================"
+    input pengiriman
+
+    if ( pengiriman ← 'A' || pengiriman ← 'a') {
+        output "anda terkena biaya pengiriman sebesar Rp." , JNT
+        total_pengiriman ← JNT
+    } else if ( pengiriman ← 'B' || pengiriman ←'b') {
+        output "anda terkena biaya pengiriman sebesar Rp." , JNE
+        total_pengiriman = JNE;
+    } else if ( pengiriman == 'C' || pengiriman == 'c') {
+        output "anda terkena biaya pengiriman sebesar Rp.", SiCEPAT
+        total_pengiriman = SiCEPAT
+    } else if ( pengiriman == 'D' || pengiriman == 'd') {
+        output "anda terkena biaya pengiriman sebesar Rp.", NINJA_Expres 
+        total_pengiriman = NINJA_Expres;
+    }else if ( pengiriman == 'E' || pengiriman == 'e'){
+        output "anda terkena biaya pengiriman sebesar Rp.", Pos_Indonesia
+        total_pengiriman = Pos_Indonesia
+    }else {
+        output "KODE YANG ANDA MASUKAN TIDAK TERSEDIA !!! "
+    }
+	output "-----------------KERANJANG BELANJA ANDA ---------------"
+    output "Total buku yang dipilih: ", total_semua_buku 
+    output "Total Harga yang harus anda bayar: Rp." , total_semua_harga + tas_belanja + total_pengiriman 
+   
+
+    output "============================" 
+    output "Masukan metode pembayaran : " 
+    output "============================"
+    output "1.," transfer”
+    output "2.," kredit
+    output "3.," Ewallet 
+    output "4.," COD 
+    output "5,." minimarket”
+    output "============================" 
+    input >> metode
+    
+    if (metode ← 1) {
+        output "==========================================" 
+        output "1."  bank1 
+        output "2."  bank2
+        output "3."  bank3 
+        output "4."  bank4 
+        output "5."  bank5 
+        output "=========================================="
+        output "PILIH BANK YANG INGIN ANDA GUNAKAN " 
+        input >> milihbank
+
+        if (milihbank ← 1) {
+        output "Anda telah memilih bank BCA" 
+        output"Berikut nomor rekening yang ditransfer:"
+        output "1254 5678 9101" 
+        
+        output "Barang anda akan kami proses 1 hari setelah pembayaran." 
+    } 
+else if (milihbank ← 2) {
+        output "Anda telah memilih bank BRI"
+        output "Berikut nomor rekening yang ditransfer:"
+        output "9876 5432 1098"
+        
+        output "Barang anda akan kami proses 1 hari setelah pembayaran." 
+ }
+ else if (milihbank ← 3) {
+        output "Anda telah memilih bank BNI" 
+        output "Berikut nomor rekening yang ditransfer:"
+        output "1122 3344 5566" 
+        
+        output "Barang anda akan kami proses 1 hari setelah pembayaran."
+    } 
+else if (milihbank ← 4) {
+        output "Anda telah memilih bank Mandiri" 
+        output "Berikut nomor rekening yang ditransfer:"
+        output "3344 5566 7788" 
+        
+        out "Barang anda akan kami proses 1 hari setelah pembayaran."
+    } 
+else if (milihbank ← 5) {
+        output "Anda telah memilih bank Danamon" ;
+        output "Berikut nomor rekening yang ditransfer:" 
+        output "6677 8899 0011" 
+        
+        output "Barang anda akan kami proses 1 hari setelah pembayaran." 
+    } else {
+        output "Input yang anda masukkan salah."
+    }
+        output "Terimakasih Telah Belanja di toko kami "
+    } 
+else if (metode ← 2) {
+        output "Mauskan nomer kredit anda (16 digit)"
+        output >> nomerkredit
+        until (nomerkredit < 1000000000000000 atau nomerkredit > 999999999999999) { // menggunakan loop agar sesuai dengan apa yang harus dimasukan
+            output "Nomer kartu kredit anda salah. Silahkan coba lagi " 
+            output "Mauskan nomer kredit anda (16 digit)" 
+            input  nomerkredit
+}
+        	output "Masukan Nama anda " 
+        	input namakredit
+        	
+        	// untuk memasukan tanggal lahir 
+        	output "Masukan tanggal lahir kartu debit anda "
+        	input tgl_lahir
+        	
+        	// untuk memasukan kode CVV pengguna kredit 
+        	output "Masukan kode CVV/CVC Debit anda (3 digit) "
+        	input kode_CVV
+        	until (kode_CVV < 100 atau kode_CVV > 999) {
+            output << "Kode Cvv yang anda masukan salah !!!, silahkan coba lagi"
+            input >> kode_CVV
+        }
+        output "Pembayaran Berhasil ! " 
+        output "Terimakasih Telah Belanja di toko kami "
+    }
+ else if (metode ← 3) {
+        output "====================================="
+        output"Pilih E-Wallet yang anda gunakan !!!" 
+        output "1. OVO" 
+        output "2. Go-Pay" 
+        output "3. DANA"
+        output "4. ShoopePay" 
+        output "=====================================”
+        input milih_wallet
+
+        if (milih_wallet ← 1) {
+            output "====== VERIFIKASI AKUN OVO ANDA ====="
+            output "Maukan nomer tlp akun anda " 
+            input  nomer_tlp
+            until (nomer_tlp < 1000000000000 || nomer_tlp > 9999999999999) {
+                output "nomer tlp yang anda masukan tidak diteemukan !!! " 
+                output "silahkan Masukan nomer tlp anda " 
+                input nomer_tlp
+            }
+            output "Akun anda telah berhasil terhubung "
+            output "Masukan Pin Akun OVO anda" 
+            input  pin
+            until (pin < 100000 atau| pin > 999999 ){
+                output "Pin yang anda masukan salah !!! "
+                output "silahkan masukan pin anda sekali lagi "
+                input pin
+
+ }
+            "Pembayaran berhasil !!! " 
+            cout << "Terimakasih telah Berbelanja di Toko Kami " 
+        } 
+else if (milih_wallet ← 2) {
+            output "====== VERIFIKASI AKUN Go-Pay ANDA ====="
+            output "Maukan nomer tlp akun anda " 
+            input nomer_tlp
+            until (nomer_tlp < 1000000000000 || nomer_tlp > 9999999999999) {
+                output "nomer tlp yang anda masukan tidak diteemukan !!! " 
+                output "silahkan Masukan nomer tlp anda "
+                input nomer_tlp
+            }
+            output "Akun anda telah berhasil terhubung "
+            output "Masukan Pin Akun Go-pay anda" 
+            input pin
+            until (pin < 100000 atau pin > 999999 ){
+                output "Pin yang anda masukan salah !!! " 
+                output "silahkan masukan pin anda sekali lagi "
+                input pin
+            }
+            output "Pembayaran berhasil !!! " 
+            output "Terimakasih telah Berbelanja di Toko Kami "
+        } else if (milih_wallet == 3) {
+            output "====== VERIFIKASI AKUN DANA ANDA ====="
+            output "Maukan nomer tlp akun anda " 
+            input nomer_tlp
+            until (nomer_tlp < 1000000000000 || nomer_tlp > 9999999999999) {
+                output "nomer tlp yang anda masukan tidak diteemukan !!! " 
+                output"silahkan Masukan nomer tlp anda "
+                input  nomer_tlp
+            }
+            output "Akun anda telah berhasil terhubung " 
+            output << "Masukan Pin Akun DANA anda" 
+            input pin
+            until (pin < 100000 || pin > 999999 ){
+                output "Pin yang anda masukan salah !!! "
+                output "silahkan masukan pin anda sekali lagi " 
+                input pin
+	}
+            output "Pembayaran berhasil !!! " 
+            output "Terimakasih telah Berbelanja di Toko Kami " 
+        } 
+else if (milih_wallet ← 4) {
+            output "====== VERIFIKASI AKUN Shoope-Pay ANDA ====="
+            output "Maukan nomer tlp akun anda “
+            input nomer_tlp
+            until (nomer_tlp < 1000000000000 || nomer_tlp > 9999999999999) {
+                output "nomer tlp yang anda masukan tidak diteemukan !!! " 
+                output "silahkan Masukan nomer tlp anda " 
+                input nomer_tlp
+            }
+            output "Akun anda telah berhasil terhubung " 
+            output "Masukan Pin Akun Shoope-Pay anda" 
+            input  pin
+            until (pin < 100000 || pin > 999999 ){
+                output "Pin yang anda masukan salah !!! "
+                output "silahkan masukan pin anda sekali lagi " 
+                input pin
+            }
+            output "Pembayaran berhasil !!! "
+            output "Terimakasih telah Berbelanja di Toko Kami "
+        } else {
+            output "input yang anda masukan salah !!! " 
+        }
+    } 
+`	else if (metode ← 4) {
+        output "Pemabayaran terkonfirmasi !!!  (COD) "
+        output "Terimakasih telah Berbelanja di Toko Kami "
+    } 
+else if ( metode ← 5) {
+        output "Silahkan Anda mengunjungi minimarket terdekat !!! "
+        output "Tunjukan nomer Pembayaran dibawah ini kepada kasir Minimarket untuk melanjutkan transaksi "
+        output "11122 33444 888555 "
+        output"Barang akan kami kirim H+1 setelah pembayaran selesai " 
+        output "Terimakasih telah Berbelanja di Toko Kami " 
+    } else if
+        output "input yang anda masukan salah !!! "
+    }

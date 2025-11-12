@@ -1,0 +1,210 @@
+//judul: deteksi dan diagnosa penyakit berdasarkan gejala
+//kamus
+pilihan, keluhan1, keluhan2, keluhan3, keluhan4 <-- char
+penyakit1(keluhan1 <-- char)
+penyakit2(keluhan1, keluhan2 <-- char)
+penyakit3(keluhan1, keluhan2, keluhan3 <-- char)
+penyakit4(keluhan1, keluhan2, keluhan3, keluhan4 <-- char)
+kembali()
+//diskripsi
+repeat
+{
+	penyakit4(keluhan1, keluhan2, keluhan3, keluhan4)
+	penyakit3(keluhan1, keluhan2, keluhan3)
+	penyakit2(keluhan1, keluhan2)
+	penyakit1(keluhan1)
+	kembali()
+} until (pilihan = 'Y' or pilihan = 'y')
+output "Terima kasih telah mengunjungi rumah sakit kami!"
+
+penyakit4(keluhan1, keluhan2, keluhan3, keluhan4 <-- char)
+{
+	output "DETEKSI & DIAGNOSA"
+        output "Silakan ceritakan bagaimana perasaan Anda!"
+        output "A = SESAK NAPAS"
+        output "B = RADANG"
+        output "C = PUSING"
+        output "D = PANAS DINGIN"
+        output "E = SAKIT PERUT"
+        output "Masukkan gejala yang Anda rasakan (A/B/C/D/E): "
+        output "Contoh: 'ABCD' = penyakit Demam"
+        input keluhan1
+        input keluhan2
+        input keluhan3
+        input keluhan4
+
+        if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A' atau keluhan3 <-- 'A' atau keluhan4 <-- 'A') and
+            (keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <-- 'B' atau keluhan4 <-- 'B') and
+            (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C' atau keluhan4 <-- 'C') and
+            (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D' atau keluhan4 <-- 'D')) then
+	{
+            output "Kamu memiliki penyakit Demam!"
+        }
+        else if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A' atau keluhan3 <-- 'A' atau keluhan4 <-- 'A') and
+                 (keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <-- 'B' atau keluhan4 <-- 'B') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C' atau keluhan4 <-- 'C') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 <-- 'E' atau keluhan4 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Tonsilofaringitis!"
+        }
+        else if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A' atau keluhan3 <-- 'A' atau keluhan4 <-- 'A') and
+                 (keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <-- 'B' atau keluhan4 <-- 'B') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D' atau keluhan4 <-- 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 <-- 'E' atau keluhan4 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Bronchitis!"
+        }
+        else if ((keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <-- 'B' atau keluhan4 <-- 'B') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C' atau keluhan4 <-- 'C') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D' atau keluhan4 <-- 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 <-- 'E' atau keluhan4 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Hepatitis!"
+        }
+        else if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A' atau keluhan3 <-- 'A' atau keluhan4 <-- 'A') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C' atau keluhan4 <-- 'C') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D' atau keluhan4 <-- 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 <-- 'E' atau keluhan4 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Gastroenteritis Atau Infeksi Saluran Pencernaan!"
+        }
+        else
+	{
+	output "Gejala tidak dikenali." 
+        }
+}
+penyakit3(keluhan1, keluhan2, keluhan3 <-- char)
+{
+	output "Masukkan 3 gejala yang Anda rasakan (A/B/C/D/E): " 
+        input keluhan1 keluhan2 keluhan3
+
+        if ((keluhan1 <-- 'A' atau keluhan2 <--'A' atau keluhan3 <-- 'A') and
+            (keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <--'B') and
+            (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C')) then
+        {
+            output "Kamu memiliki penyakit Vertigo!" 
+        } 
+        else if ((keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 <-- 'B') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D')) then
+        {
+            output "Kamu memiliki penyakit Influenza Atau Flu!"
+        } 
+        else if ((keluhan1 <-- 'C' atau keluhan2 <-- 'C' atau keluhan3 <-- 'C') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 <-- 'E')) then
+        {
+            output  "Kamu memiliki penyakit Demam Tifoid!"
+        } 
+        else if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A' atau keluhan3 <-- 'A') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 <-- 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E  atau keluhan3 <-- 'E')) then
+		{
+            output  "Kamu memiliki penyakit Pneumonia!" 
+        }
+        else if ((keluhan1 <-- 'B' atau keluhan2 <-- 'B' atau keluhan3 == 'B') and
+                 (keluhan1 <-- 'D' atau keluhan2 <-- 'D' atau keluhan3 == 'D') and
+                 (keluhan1 <-- 'E' atau keluhan2 <-- 'E' atau keluhan3 == 'E')) then
+		{
+            output  "Kamu memiliki penyakit Kolitis atau Divertikulitis !" 
+        }
+        else
+        {
+            output  "Gejala tidak dikenali."
+        }
+}
+penyakit2(keluhan1, keluhan2 <-- char)
+{
+        output "Masukkan 2 gejala yang Anda rasakan (A/B/C/D/E): " 
+        input keluhan1 keluhan2
+
+        if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A') and
+            (keluhan1 <-- 'B' atau keluhan2 <-- 'B')) then
+        {
+            output "Kamu memiliki penyakit faringitis atau laringitis!"
+        } 
+        else if ((keluhan1 <-- 'B' atau keluhan2 <-- 'B') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C')) then
+        {
+            ouutput "Kamu memiliki penyakit Gejala Batuk!"
+        } 
+        else if ((keluhan1 <-- 'A' atau keluhan2 <-- 'A') and
+                 (keluhan1 <-- 'C' atau keluhan2 <-- 'C')) then
+        {
+            output  "Kamu memiliki penyakit Gejala Stres!"
+        } 
+        else if  ((keluhan1 <-- 'D' atau keluhan2 <-- 'D') and
+                  (keluhan1 <-- 'E' atau keluhan2 <-- 'E')) then
+	{
+            output  "Kamu memiliki penyakit Asam Lambung!" 
+        }
+        else if  ((keluhan1 <-- 'A' atau keluhan2 <-- 'A') and 
+                  (keluhan1 <-- 'E' atau keluhan2 <-- 'E')) then
+	{
+            output  "Kamu memiliki penyakit Gastritis Atau Peradangan Pada Lambung!"
+	}
+        else if  ((keluhan1 <-- 'A' atau keluhan2 <-- 'A') and
+                  (keluhan1 <-- 'D' atau keluhan2 <-- 'D')) then
+	{
+            output "Kamu memiliki penyakit Lemah Jantung!"
+	}
+        else if  ((keluhan1 <-- 'B' atau keluhan2 <-- 'B') and
+                  (keluhan1 <-- 'D' atau keluhan2 <-- 'D')) then
+	{
+            output "Kamu memiliki penyakit Rhinovirus!"
+	}
+        else if  ((keluhan1 <-- 'B' atau keluhan2 <-- 'B' and
+                  (keluhan1 <-- 'E' atau keluhan2 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Inlflasi Atau Peradangan Pada Organ Tertentu!"
+	}
+        else if  ((keluhan1 <-- 'C' atau keluhan2 <-- 'C') and
+                  (keluhan1 <-- 'D' atau keluhan2 <-- 'D')) then
+	{
+            output "Kamu memiliki penyakit Darah Rendah!"
+	}
+        else if  ((keluhan1 <-- 'C' atau keluhan2 <-- 'C') and
+                  (keluhan1 <-- 'E' atau keluhan2 <-- 'E')) then
+	{
+            output "Kamu memiliki penyakit Gejala Kecemasan!"
+	}
+        else
+        {
+            output "Gejala tidak dikenali." 
+        }
+}
+penyakit1(keluhan1 <-- char)
+{
+        output "Masukkan 1 gejala yang Anda rasakan (A/B/C/D/E): " 
+        input keluhan1
+
+        if (keluhan1 <-- 'A') then
+        {
+            output  "Kamu memiliki penyakit Asma!"
+        }
+        else if (keluhan1 <-- 'B') then
+        {
+            output  "Kamu memiliki penyakit Amandel!" 
+        } 
+        else if (keluhan1 <-- 'C') then
+        {
+            output  "Kamu memiliki penyakit Migren!" 
+        } 
+        else if (keluhan1 <-- 'D') then
+        {	
+	    output  "Kamu memiliki penyakit Malaria!" 
+        } 
+        else if (keluhan1 <-- 'E') then
+        {
+            output  "Kamu memiliki penyakit Maag!" 
+        } 
+        else
+        {
+            output  "Gejala tidak dikenali." 
+        }
+}
+kembali()
+{
+        output "Apakah Anda ingin melakukan diagnosa lagi? (Y/N): " 
+        input pilihan
+}

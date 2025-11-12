@@ -1,0 +1,8 @@
+//judul: input nama lengkap
+//kamus
+nama <- string
+//diskripsi
+//input nama lengkap
+output "masukkan nama lengkap"
+input string nama
+output "nama lengkap anda", nama

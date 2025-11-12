@@ -1,0 +1,20 @@
+//judul: input dan cetak nama sebanyak n kali
+//kamus
+nama <- string
+n <- integer
+i <- integer
+//diskripsi
+//input nama
+output "masukkan nama"
+input string nama
+
+//input jumlah pengulangan
+output "masukkan jumlah pengulangan"
+input n
+
+//mencetak nama sebanyak n kali
+repeat
+{
+	output nama
+	i++
+} until (i lebih kecil samadengan n)

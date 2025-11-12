@@ -1,0 +1,119 @@
+//judul: tugas daspro ADT SIM zabrinaa
+//kamus :
+//ADT untuk SIM
+//TGL
+type TGL
+{
+    tgll <-- string
+}
+//NAMA
+type NAMA
+{
+    nama_pjg <-- string
+}
+//NOMOR SIM
+type NOMSIM
+{
+    nomorsim <-- long long int
+}
+//JENIS KELAMIN
+type JENIS_KELAMIN
+{
+    jk <-- string
+}
+//GOLONGAN DARAH
+type GOLONGAN_DARAH
+{
+    goldar <-- char
+}
+//ALAMAT
+type ALAMAT
+{
+    alamat, kelurahan, kecamatan, rtrw <-- string
+}
+//PEKERJAAN
+type PEKERJAAN
+{
+    pekerjaan <-- string
+}
+//MASA BERLAKU SIM
+type BERLAKU
+{
+    berlaku <-- string
+}
+//JENIS KENDARAAN SIM
+type JENIS_KENDARAAN
+{
+    JKEN <-- char
+}
+//PROVINSI
+type PROVINSI
+{
+    prov <-- string
+}
+//DATA SIM
+type SIM
+{
+    jenis_kendaraan_sim <-- JENIS_KENDARAAN
+    nama_sim <-- NAMA
+    nomor_sim <-- NOMSIM
+    tgl_lahir_sim <-- TGL
+    jenis_kelamin_sim <-- JENIS_KELAMIN
+    golongan_darah_sim <-- GOLONGAN_DARAH
+    alamat_sim <-- ALAMAT
+    pekerjaan_sim <-- PEKERJAAN
+    berlaku_sim <-- BERLAKU
+    provinsi_sim <-- PROVINSI
+}
+//diskripsi:
+//INPUTAN DATA ADT SIM
+zabrinaa <-- SIM
+inputSIM <-- SIM
+{
+    sim <-- SIM
+    output "Inputan Data ADT SIM"
+    output "Masukkan Nama Panjang Anda: "
+    input zabrinaa.nama_sim.nama_pjg
+    output "Masukkan Nomor SIM Anda: "
+    input zabrinaa.nomor_sim.nomorsim
+    output "Masukkan Jenis Kendaraan SIM Anda: "
+    input zabrinaa.jenis_kendaraan_sim.JKEN
+    output "Masukkan Tempat/Tanggal Lahir Anda: "
+    input zabrinaa.tgl_lahir_sim.tgll
+    output "Masukkan Jenis Kelamin Anda: "
+    input zabrinaa.jenis_kelamin_sim.jk
+    output "Masukkan Golongan Darah Anda: "
+    input zabrinaa.golongan_darah_sim.goldar
+    output "Masukkan Alamat Anda: "
+    input zabrinaa.alamat_sim.alamat
+    output "Masukkan Alamat Kelurahan Anda: "
+    input zabrinaa.alamat_sim.kelurahan
+    output "Masukkan Alamat Kecamatan Anda: "
+    input zabrinaa.alamat_sim.kecamatan
+    output "Masukkan Alamat RT/RW Anda: "
+    input zabrinaa.alamat_sim.rtrw
+    output "Masukkan Pekerjaan Anda: "
+    input zabrinaa.pekerjaan_sim.pekerjaan
+    output "Masukkan Provinsi SIM Anda: "
+    input zabrinaa.provinsi_sim.prov
+    output "Masukkan Masa Berlaku SIM Anda: "
+    input zabrinaa.berlaku_sim.berlaku
+}
+{
+    inputSIM <-- SIM sim
+    //output untuk memverifikasi data SIM
+    output "=====Data SIM Anda====="
+    output "Nama Panjang: ", zabrinaa.nama_sim.nama_pjg 
+    output "Jenis Kendaraan: ", zabrinaa.jenis_kendaraan_sim.JKEN 
+    output "Nomor SIM: ", zabrinaa.nomor_sim.nomorsim 
+    output "Tempat/Tanggal Lahir: ", zabrinaa.tgl_lahir_sim.tgll 
+    output "Jenis Kelamin: ", zabrinaa.jenis_kelamin_sim.jk 
+    output "Golongan Darah: ", zabrinaa.golongan_darah_sim.goldar 
+    output "Alamat: ", zabrinaa.alamat_sim.alamat 
+    output "Kelurahan: ", zabrinaa.alamat_sim.kelurahan 
+    output "Kecamatan: ", zabrinaa.alamat_sim.kecamatan 
+    output "RT/RW: ", zabrinaa.alamat_sim.rtrw 
+    output "Pekerjaan: ", zabrinaa.pekerjaan_sim.pekerjaan 
+    output "Provinsi: ", zabrinaa.provinsi_sim.prov 
+    output "Masa Berlaku: ", zabrinaa.berlaku_sim.berlaku 
+}

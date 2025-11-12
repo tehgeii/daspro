@@ -1,0 +1,121 @@
+//judul: tugas daspro kondisi NIM
+//kamus
+fakultas, jenjang, prodi <-- char
+thnmsk <-- integer
+//diskripsi
+output "masukkan fakultas, jenjang, prodi, tahun"
+input fakultas
+input jenjang
+input prodi
+input thnmsk
+
+if (fakultas = 'A') then
+{
+	output "fasilkom"
+}
+else if (fakultas = 'B') then
+{
+	output "feb"
+}
+else if (fakultas = 'E') then
+{
+	output "ft"
+}
+else if (fakultas = 'D') then
+{
+	output "fkm"
+}
+else
+{
+	output "??"
+}
+
+if (jenjang = '1') then
+{
+	output "s1"
+}
+else if (jenjang = '2') then
+{
+	output "d3"
+}
+else
+{
+	output "??"
+}
+
+if (fakultas = 'A') then
+{
+	if (jenjang = '1') then
+	{
+		if (prodi = '1') then
+		{
+			output "TI"
+		}
+		else if (prodi = '2') then
+		{
+			output "SI"
+		}
+		else if (prodi = '4') then
+		{
+			output = "DKV"
+		}
+		else
+		{
+			output "??"
+		}
+	}
+	else if (jenjang = '2') then
+	{
+		if (prodi = '2') then
+		{
+			output = "TI"
+		}
+		else
+		{
+			output "??"
+		}
+	}
+	else
+	{
+		output "??"
+	}
+}
+else if (fakultas = 'B') then
+{
+	if (prodi = '2') then
+	{
+		output "akuntansi"
+	}
+	else
+	{
+		output "??"
+	}
+}
+else if (fakultas = 'E') then
+{
+	if (prodi = '1') then
+	{
+		output "teknik electro"
+	}
+	else
+	{
+		output "??"
+	}
+}
+else if (fakultas = 'D') then
+{
+	if (prodi = '2') then
+	{
+		output "rekam medis"
+	}
+	else
+	{
+		output "??"
+	}
+}
+else
+{
+	output "??"
+}
+
+output "tahun angkatan"

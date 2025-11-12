@@ -1,0 +1,129 @@
+//tugas daspro ADT kartu pelajar dafi
+//kamus
+//kamus ADT Kartu Pelajar
+//TGL
+type TGL
+{
+    tempat, BB <-- string
+    HH, TT <-- int
+}
+//NAMA
+type NAMA
+{
+    nama_pjg, gelarD, gelarB <-- string
+}
+//NOMOR NIS
+type NONIS
+{
+    nomnis, nonis <-- long long int
+}
+//ALAMAT
+type ALAMAT
+{
+    alamat, kelurahan, kecamatan <-- string
+    rtrw <-- int
+}
+//MASA BERLAKU KARTU
+type BERLAKU
+{
+    berlaku <-- string
+}
+//TGL KARTU DIBUAT
+type TGLK
+{
+    tempatt, MM <-- string
+    DD, YY <-- int
+}
+//NAMA SEKOLAH
+type SEKOLAH
+{
+    sklh <-- string
+}
+//JENJANG PENDIDIKAN
+type JENJANG
+{
+    jenpen <-- string
+}
+//YANG MENANDATANGANI
+type PARAF
+{
+    namaparaf <-- string
+}
+//DATA KARTU PELAJAR
+type KP
+{
+    nomornis <-- NONIS
+    nama_kp <-- NAMA
+    tgl_lahir_kp <-- TGL
+    alamat_kp <-- ALAMAT
+    tanggaldibuat_kp <-- TGLK
+    kepalasekolah <-- PARAF
+    berlaku_kp <-- BERLAKU
+    jenjangpendidikan <-- JENJANG
+    sekolah <-- SEKOLAH
+}
+//INPUTAN DATA ADT KARTU PELAJAR
+Dafi <-- KP
+inputKP <-- KP
+{
+    kp <-- KP
+    output "Inputan Data ADT KARTU PELAJAR"
+    output "Masukkan Jenjang Pendidikan Sekolah Anda: "
+    input "Dafi.jenjangpendidikan.jenpen
+    output "Masukkan Nama Sekolah Anda: "
+    input Dafi.sekolah.sklh
+    output "Masukkan Nama Anda: "
+    input Dafi.nama_kp.nama_pjg
+    output "Masukkan NIS Anda: "
+    input Dafi.nomornis.nomnis
+    output "Masukkan NISN Anda: "
+    input Dafi.nomornis.nonis
+    output "Masukkan Tempat Lahir Anda: "
+    input Dafi.tgl_lahir_kp.tempat
+    output "Masukkan Tanggal Lahir Anda: "
+    input Dafi.tgl_lahir_kp.HH
+    output "Masukkan Bulan Lahir Anda: "
+    input Dafi.tgl_lahir_kp.BB
+    output "Masukkan Tahun Lahir Anda: "
+    input Dafi.tgl_lahir_kp.TT
+    output "Masukkan Alamat Anda: "
+    input Dafi.alamat_kp.alamat
+    output "Masukkan Alamat Kelurahan Anda: "
+    input Dafi.alamat_kp.kelurahan
+    output "Masukkan Alamat Kecamatan Anda: "
+    input Dafi.alamat_kp.kecamatan
+    output "Masukkan Alamat RT Anda: "
+    input Dafi.alamat_kp.rt
+    output "Masukkan Alamat RW Anda: "
+    input Dafi.alamat_kp.rw
+    output "Masukkan Nama Kepala Sekolah Anda: "
+    input Dafi.kepalasekolah.namaparaf
+    output "Masukkan Tempat Dibuatnya Kartu Anda: "
+    input Dafi.tanggaldibuat_kp.tempatt
+    output "Masukkan Tanggal Dibuatnya Kartu Anda: "
+    input Dafi.tanggaldibuat_kp.DD
+    output "Masukkan Bulan Dibuatnya Kartu Anda: "
+    input Dafi.tanggaldibuat_kp.MM
+    output "Masukkan Tahun Dibuatnya Kartu Anda: "
+    input Dafi.tanggaldibuat_kp.YY
+    output "Masukkan Gelar Depan Kepala Sekolah Anda: "
+    input Dafi.nama_kp.gelarD
+    output "Masukkan Gelar Belakang Kepala Sekolah Anda: "
+    input Dafi.nama_kp.gelarB
+    output "Masukkan Masa Berlaku Kartu Pelajar Anda: "
+    input Dafi.berlaku_kp.berlaku
+}
+//Diskripsi
+KP kp <-- inputKP
+//output untuk memverifikasi data Kartu Pelajar
+output "=====Data Kartu Pelajar Anda====="
+output "Jenjang Pendidikan: ", Dafi.jenjangpendidikan.jenpen
+output "Sekolah: ", Dafi.sekolah.sklh
+output "Nama: ", Dafi.nama_kp.nama_pjg
+output "NIS: ", Dafi.nomornis.nomnis
+output "NISN: ", Dafi.nomornis.nonis
+output "Tempat/Tanggal Lahir: ", Dafi.tgl_lahir_kp.tempat, ", ", Dafi.tgl_lahir_kp.HH, " ", Dafi.tgl_lahir_kp.BB, " ", Dafi.tgl_lahir_kp.TT
+output "Alamat: ", Dafi.alamat_kp.alamat, " RT ", Dafi.alamat_kp.rt, " RW ", Dafi.alamat_kp.rw, ", ", Dafi.alamat_kp.kelurahan, ", ", Dafi.alamat_kp.kecamatan
+output "Kartu Dibuat Di: ", Dafi.tanggaldibuat_kp.tempatt, ", ", Dafi.tanggaldibuat_kp.DD, " ", Dafi.tanggaldibuat_kp.MM, " ", Dafi.tanggaldibuat_kp.YY
+output "Nama Kepala Sekolah: ", Dafi.nama_kp.gelarD, " ", Dafi.kepalasekolah.namaparaf, ", ", Dafi.nama_kp.gelarB
+output "Masa Berlaku: ", Dafi.berlaku_kp.berlaku
