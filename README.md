@@ -1,2 +1,2 @@
-# Dasar Pemrograman
-### Daspro Semester 1
+# daspro
+### Dasar Pemrograman Semester 1
